@@ -1,0 +1,101 @@
+{
+  "name": "LoanRequest",
+  "type": "object",
+  "properties": {
+    "business_name": {
+      "type": "string",
+      "description": "Name of the small business"
+    },
+    "business_type": {
+      "type": "string",
+      "enum": [
+        "retail",
+        "food_service",
+        "manufacturing",
+        "technology",
+        "healthcare",
+        "agriculture",
+        "services",
+        "construction",
+        "other"
+      ],
+      "description": "Type of business"
+    },
+    "location": {
+      "type": "string",
+      "description": "City and state"
+    },
+    "amount_requested": {
+      "type": "number",
+      "description": "Loan amount in dollars"
+    },
+    "amount_funded": {
+      "type": "number",
+      "default": 0,
+      "description": "Amount funded so far"
+    },
+    "interest_rate": {
+      "type": "number",
+      "description": "Proposed interest rate"
+    },
+    "term_months": {
+      "type": "number",
+      "description": "Loan term in months"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "Purpose of the loan"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed business description"
+    },
+    "credit_score": {
+      "type": "string",
+      "enum": [
+        "excellent",
+        "good",
+        "fair",
+        "building"
+      ],
+      "description": "Credit assessment tier"
+    },
+    "years_in_business": {
+      "type": "number",
+      "description": "Years the business has been operating"
+    },
+    "annual_revenue": {
+      "type": "number",
+      "description": "Annual revenue in dollars"
+    },
+    "employees": {
+      "type": "number",
+      "description": "Number of employees"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "seeking_funding",
+        "partially_funded",
+        "fully_funded",
+        "repaying",
+        "completed"
+      ],
+      "default": "seeking_funding"
+    },
+    "underserved_area": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the business is in an underserved area"
+    },
+    "lender_count": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "business_name",
+    "amount_requested",
+    "purpose"
+  ]
+}

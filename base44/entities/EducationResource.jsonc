@@ -1,0 +1,80 @@
+{
+  "name": "EducationResource",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Resource title"
+    },
+    "institution": {
+      "type": "string",
+      "description": "Contributing institution"
+    },
+    "resource_type": {
+      "type": "string",
+      "enum": [
+        "curriculum",
+        "course_module",
+        "lab_guide",
+        "research_paper",
+        "workshop",
+        "certification_prep",
+        "mentorship_program"
+      ],
+      "description": "Type of resource"
+    },
+    "subject_area": {
+      "type": "string",
+      "enum": [
+        "artificial_intelligence",
+        "cybersecurity",
+        "data_science",
+        "cloud_computing",
+        "robotics",
+        "renewable_energy",
+        "biotech",
+        "advanced_manufacturing",
+        "blockchain",
+        "quantum_computing"
+      ],
+      "description": "Subject area"
+    },
+    "description": {
+      "type": "string"
+    },
+    "access_level": {
+      "type": "string",
+      "enum": [
+        "open",
+        "registered",
+        "institutional"
+      ],
+      "default": "open"
+    },
+    "collaborators_count": {
+      "type": "number",
+      "default": 0
+    },
+    "downloads": {
+      "type": "number",
+      "default": 0
+    },
+    "rating": {
+      "type": "number",
+      "default": 0
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "file_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "institution"
+  ]
+}

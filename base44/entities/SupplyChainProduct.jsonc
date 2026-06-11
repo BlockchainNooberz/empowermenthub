@@ -1,0 +1,92 @@
+{
+  "name": "SupplyChainProduct",
+  "type": "object",
+  "properties": {
+    "product_name": {
+      "type": "string",
+      "description": "Name of the product"
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "Manufacturing company name"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "electronics",
+        "textiles",
+        "food_beverage",
+        "automotive",
+        "furniture",
+        "tools",
+        "agriculture",
+        "cosmetics",
+        "other"
+      ],
+      "description": "Product category"
+    },
+    "origin_state": {
+      "type": "string",
+      "description": "State of manufacturing"
+    },
+    "origin_city": {
+      "type": "string",
+      "description": "City of manufacturing"
+    },
+    "materials_source": {
+      "type": "string",
+      "description": "Where raw materials are sourced"
+    },
+    "domestic_content_pct": {
+      "type": "number",
+      "description": "Percentage of domestic content (0-100)"
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "verified",
+        "flagged"
+      ],
+      "default": "pending"
+    },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of certifications"
+    },
+    "description": {
+      "type": "string"
+    },
+    "supply_chain_steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "domestic": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "jobs_supported": {
+      "type": "number",
+      "description": "Number of American jobs supported"
+    },
+    "image_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "product_name",
+    "manufacturer"
+  ]
+}
