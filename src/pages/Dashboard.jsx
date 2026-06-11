@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { 
   Landmark, Package, Award, BookOpen, TrendingUp, Users, 
-  DollarSign, ShieldCheck, ArrowRight, MapPin, Sparkles, Bot, BarChart2, LibraryBig
+  DollarSign, ShieldCheck, ArrowRight, MapPin, Sparkles, Bot, BarChart2, LibraryBig, FileText
 } from "lucide-react";
 import { motion } from "framer-motion";
 import StatCard from "@/components/shared/StatCard";
@@ -102,6 +102,15 @@ export default function Dashboard() {
       stat: "Live SBA API data",
       gradient: "from-teal-600/10 to-cyan-600/10",
       iconBg: "bg-teal-600/10 text-teal-600"
+    },
+    {
+      title: "Blueprint Builder",
+      desc: "Describe your business in plain English — get a full business plan, legal structure, financials, branding & more",
+      icon: Sparkles,
+      path: "/blueprint",
+      stat: "AI-generated documents",
+      gradient: "from-accent/10 to-yellow-500/10",
+      iconBg: "bg-accent/20 text-amber-600"
     }
   ];
 

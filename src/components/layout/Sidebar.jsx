@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { 
   LayoutDashboard, Landmark, Package, Award, BookOpen, 
-  ChevronLeft, ChevronRight, LogOut, Bot, BarChart2, LibraryBig
+  ChevronLeft, ChevronRight, LogOut, Bot, BarChart2, LibraryBig, Sparkles
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -16,6 +16,7 @@ const navItems = [
   { path: "/advisor", label: "AI Advisor", icon: Bot },
   { path: "/impact", label: "Impact Report", icon: BarChart2 },
   { path: "/resources", label: "SBA Resources", icon: LibraryBig },
+  { path: "/blueprint", label: "Blueprint Builder", icon: Sparkles },
 ];
 
 export default function Sidebar() {
