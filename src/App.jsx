@@ -18,6 +18,8 @@ import Lending from '@/pages/Lending';
 import SupplyChain from '@/pages/SupplyChain';
 import Skills from '@/pages/Skills';
 import Education from '@/pages/Education';
+import AIAssistant from '@/pages/AIAssistant';
+import ImpactReport from '@/pages/ImpactReport';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -56,6 +58,8 @@ const AuthenticatedApp = () => {
           <Route path="/supply-chain" element={<SupplyChain />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/education" element={<Education />} />
+          <Route path="/advisor" element={<AIAssistant />} />
+          <Route path="/impact" element={<ImpactReport />} />
         </Route>
       </Route>
 

@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { 
   LayoutDashboard, Landmark, Package, Award, BookOpen, 
-  ChevronLeft, ChevronRight, LogOut, Star
+  ChevronLeft, ChevronRight, LogOut, Bot, BarChart2
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -13,6 +13,8 @@ const navItems = [
   { path: "/supply-chain", label: "Supply Chain", icon: Package },
   { path: "/skills", label: "Skills Marketplace", icon: Award },
   { path: "/education", label: "Education Hub", icon: BookOpen },
+  { path: "/advisor", label: "AI Advisor", icon: Bot },
+  { path: "/impact", label: "Impact Report", icon: BarChart2 },
 ];
 
 export default function Sidebar() {
@@ -26,8 +28,8 @@ export default function Sidebar() {
     )}>
       {/* Logo */}
       <div className="p-5 flex items-center gap-3 border-b border-sidebar-border">
-        <div className="w-9 h-9 rounded-lg bg-sidebar-primary flex items-center justify-center flex-shrink-0">
-          <Star className="w-5 h-5 text-sidebar-primary-foreground" />
+        <div className="w-9 h-9 rounded-lg bg-sidebar-primary flex items-center justify-center flex-shrink-0 font-heading font-bold text-white text-base">
+          🇺🇸
         </div>
         {!collapsed && (
           <div className="overflow-hidden">

@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { 
   Landmark, Package, Award, BookOpen, TrendingUp, Users, 
-  DollarSign, ShieldCheck, ArrowRight, MapPin, Sparkles 
+  DollarSign, ShieldCheck, ArrowRight, MapPin, Sparkles, Bot, BarChart2
 } from "lucide-react";
 import { motion } from "framer-motion";
 import StatCard from "@/components/shared/StatCard";
@@ -75,23 +75,52 @@ export default function Dashboard() {
       stat: `${totalDownloads.toLocaleString()} downloads`,
       gradient: "from-violet-600/10 to-purple-600/10",
       iconBg: "bg-violet-600/10 text-violet-600"
+    },
+    {
+      title: "AI Business Advisor",
+      desc: "Agentic AI guidance for SBA loans, business plans & workforce strategy",
+      icon: Bot,
+      path: "/advisor",
+      stat: "Powered by AI",
+      gradient: "from-red-600/10 to-rose-600/10",
+      iconBg: "bg-red-600/10 text-red-600"
+    },
+    {
+      title: "Impact Report",
+      desc: "Metrics, charts & stakeholder alignment for SBA, SBDC, SCORE & White House",
+      icon: BarChart2,
+      path: "/impact",
+      stat: "SBA + SCORE + SBDC aligned",
+      gradient: "from-primary/10 to-blue-800/10",
+      iconBg: "bg-primary/10 text-primary"
     }
   ];
 
   return (
     <div className="p-6 md:p-10 max-w-7xl mx-auto">
-      {/* Hero */}
-      <motion.div {...fadeIn} className="mb-10">
-        <div className="flex items-center gap-2 mb-2">
-          <Sparkles className="w-5 h-5 text-accent" />
-          <span className="text-sm font-medium text-accent uppercase tracking-wider">Economic Empowerment Platform</span>
+      {/* Hero Banner */}
+      <motion.div {...fadeIn} className="mb-10 relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary to-[#0a2565] p-8 shadow-xl">
+        <div className="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-red-500 to-red-700 rounded-l-2xl" />
+        <div className="absolute right-6 top-3 text-white/5 text-8xl select-none pointer-events-none leading-snug">
+          ★ ★ ★<br/>★ ★ ★<br/>★ ★ ★
         </div>
-        <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight leading-tight">
-          Building America's<br />Economic Future
-        </h1>
-        <p className="text-muted-foreground mt-3 text-lg max-w-2xl">
-          Connecting communities, verifying credentials, and strengthening domestic supply chains — all in one transparent platform.
-        </p>
+        <div className="pl-3 relative z-10">
+          <div className="flex items-center gap-2 mb-2">
+            <Sparkles className="w-4 h-4 text-accent" />
+            <span className="text-xs font-semibold text-accent uppercase tracking-widest">🇺🇸 American Economic Empowerment Hub</span>
+          </div>
+          <h1 className="text-3xl md:text-4xl font-heading font-bold text-white tracking-tight leading-tight mb-3">
+            Building America's<br />Economic Future
+          </h1>
+          <p className="text-white/70 text-base max-w-2xl mb-4">
+            A unified platform for capital access, domestic supply chain transparency, workforce credentialing, and emerging technology education — aligned with SBA, SBDC, SCORE, and Made in America.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {["SBA Aligned", "SBDC Ready", "SCORE Network", "Made in America"].map(tag => (
+              <span key={tag} className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/10 text-white/80 border border-white/20">{tag}</span>
+            ))}
+          </div>
+        </div>
       </motion.div>
 
       {/* Stats Row */}
