@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { 
   Landmark, Package, Award, BookOpen, TrendingUp, Users, 
-  DollarSign, ShieldCheck, ArrowRight, MapPin, Sparkles, Bot, BarChart2
+  DollarSign, ShieldCheck, ArrowRight, MapPin, Sparkles, Bot, BarChart2, LibraryBig
 } from "lucide-react";
 import { motion } from "framer-motion";
 import StatCard from "@/components/shared/StatCard";
@@ -93,6 +93,15 @@ export default function Dashboard() {
       stat: "SBA + SCORE + SBDC aligned",
       gradient: "from-primary/10 to-blue-800/10",
       iconBg: "bg-primary/10 text-primary"
+    },
+    {
+      title: "SBA Resource Center",
+      desc: "Browse programs, find local SBDC/SCORE offices, and look up size standards",
+      icon: LibraryBig,
+      path: "/resources",
+      stat: "Live SBA API data",
+      gradient: "from-teal-600/10 to-cyan-600/10",
+      iconBg: "bg-teal-600/10 text-teal-600"
     }
   ];
 

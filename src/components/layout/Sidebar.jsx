@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { 
   LayoutDashboard, Landmark, Package, Award, BookOpen, 
-  ChevronLeft, ChevronRight, LogOut, Bot, BarChart2
+  ChevronLeft, ChevronRight, LogOut, Bot, BarChart2, LibraryBig
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -15,6 +15,7 @@ const navItems = [
   { path: "/education", label: "Education Hub", icon: BookOpen },
   { path: "/advisor", label: "AI Advisor", icon: Bot },
   { path: "/impact", label: "Impact Report", icon: BarChart2 },
+  { path: "/resources", label: "SBA Resources", icon: LibraryBig },
 ];
 
 export default function Sidebar() {

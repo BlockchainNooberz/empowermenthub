@@ -20,6 +20,7 @@ import Skills from '@/pages/Skills';
 import Education from '@/pages/Education';
 import AIAssistant from '@/pages/AIAssistant';
 import ImpactReport from '@/pages/ImpactReport';
+import Resources from '@/pages/Resources';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -60,6 +61,7 @@ const AuthenticatedApp = () => {
           <Route path="/education" element={<Education />} />
           <Route path="/advisor" element={<AIAssistant />} />
           <Route path="/impact" element={<ImpactReport />} />
+          <Route path="/resources" element={<Resources />} />
         </Route>
       </Route>
 
