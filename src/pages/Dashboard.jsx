@@ -107,13 +107,13 @@ export default function Dashboard() {
         <div className="pl-3 relative z-10">
           <div className="flex items-center gap-2 mb-2">
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-xs font-semibold text-accent uppercase tracking-widest">🇺🇸 American Economic Empowerment Hub</span>
+            <span className="text-xs font-semibold text-accent uppercase tracking-widest">🇺🇸 EmpowerHub</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-heading font-bold text-white tracking-tight leading-tight mb-3">
             Building America's<br />Economic Future
           </h1>
           <p className="text-white/70 text-base max-w-2xl mb-4">
-            A unified platform for capital access, domestic supply chain transparency, workforce credentialing, and emerging technology education — aligned with SBA, SBDC, SCORE, and Made in America.
+          Capital access, supply chain transparency, workforce credentialing, and technology education — unified for American economic growth.
           </p>
           <div className="flex flex-wrap gap-2">
             {["SBA Aligned", "SBDC Ready", "SCORE Network", "Made in America"].map(tag => (
