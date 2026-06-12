@@ -1,39 +1,38 @@
-**Welcome to your Base44 project** 
+# EmpowermentHub 🌍✊
 
-**About**
+> AI-powered platform for economic empowerment, skills development, and opportunity access
 
-View and Edit  your app on [Base44.com](http://Base44.com) 
+EmpowermentHub connects underserved individuals and communities with resources, training programs, funding opportunities, and mentorship networks. Built on Base44 with a focus on real-world impact at scale.
 
-This project contains everything you need to run your app locally.
+## Features
+- 🎓 **Skills & Training Marketplace** — curated pathways to in-demand skills with AI-personalized learning tracks
+- 💸 **Grant & Funding Finder** — AI-matched grants, microloans, and funding opportunities for individuals and organizations
+- 🤝 **Mentor Network** — connect with professionals, entrepreneurs, and community leaders
+- 📊 **Impact Tracker** — measure and report social impact metrics for donors and program operators
+- 🌐 **Multi-Language Support** — accessible to global communities via translation layer
 
-**Edit the code in your local development environment**
+## Tech Stack
+- **Frontend:** React / Base44 UI
+- **Backend:** Base44 entity system + serverless functions
+- **AI:** Opportunity matching, skill gap analysis, personalized recommendations
+- **Integrations:** LinkedIn, government grant databases, NGO APIs
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+## Use Cases
+- Workforce development programs
+- Nonprofit program management
+- Microenterprise development
+- Community college partnerships
+- International development organizations
 
-**Prerequisites:** 
-
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
-
+## Getting Started
+```bash
+git clone https://github.com/BlockchainNooberz/empowermenthub
+cd empowermenthub
+npm install
+npm run dev
 ```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
 
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
-```
-
-Run the app: `npm run dev`
-
-**Publish your changes**
-
-Open [Base44.com](http://Base44.com) and click on Publish.
-
-**Docs & Support**
-
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
-
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+## About
+Built by **Andrew Elston** — developer committed to building tools that create real-world opportunity.
+- GitHub: [BlockchainNooberz](https://github.com/BlockchainNooberz)
+- Contact: andrewelston177@gmail.com
