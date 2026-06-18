@@ -22,6 +22,12 @@ import AIAssistant from '@/pages/AIAssistant';
 import ImpactReport from '@/pages/ImpactReport';
 import Resources from '@/pages/Resources';
 import BlueprintBuilder from '@/pages/BlueprintBuilder';
+import GrantsFinder from '@/pages/GrantsFinder';
+import LenderMarketplace from '@/pages/LenderMarketplace';
+import NationalDashboard from '@/pages/NationalDashboard';
+import MentorMatch from '@/pages/MentorMatch';
+import CollaborationOutreach from '@/pages/CollaborationOutreach';
+import GrantAssistant from '@/pages/GrantAssistant';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -64,6 +70,12 @@ const AuthenticatedApp = () => {
           <Route path="/impact" element={<ImpactReport />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/blueprint" element={<BlueprintBuilder />} />
+          <Route path="/grants" element={<GrantsFinder />} />
+          <Route path="/lenders" element={<LenderMarketplace />} />
+          <Route path="/national" element={<NationalDashboard />} />
+          <Route path="/mentors" element={<MentorMatch />} />
+          <Route path="/outreach" element={<CollaborationOutreach />} />
+          <Route path="/grant-assistant" element={<GrantAssistant />} />
         </Route>
       </Route>
 

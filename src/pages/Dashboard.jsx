@@ -3,7 +3,8 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { 
   Landmark, Package, Award, BookOpen, TrendingUp, Users, 
-  DollarSign, ShieldCheck, ArrowRight, MapPin, Sparkles, Bot, BarChart2, LibraryBig, FileText
+  DollarSign, ShieldCheck, ArrowRight, MapPin, Sparkles, Bot, BarChart2, LibraryBig,
+  Globe, Banknote, FileSearch, PenLine, Mail
 } from "lucide-react";
 import { motion } from "framer-motion";
 import StatCard from "@/components/shared/StatCard";
@@ -111,7 +112,61 @@ export default function Dashboard() {
       stat: "AI-generated documents",
       gradient: "from-accent/10 to-yellow-500/10",
       iconBg: "bg-accent/20 text-amber-600"
-    }
+    },
+    {
+      title: "Federal Grants Finder",
+      desc: "Discover SBIR, EDA, USDA, and SBA grants tailored to your business with AI matching",
+      icon: FileSearch,
+      path: "/grants",
+      stat: "Live federal programs",
+      gradient: "from-sky-600/10 to-blue-500/10",
+      iconBg: "bg-sky-600/10 text-sky-600"
+    },
+    {
+      title: "Grant Application Writer",
+      desc: "AI writes your full SBIR, EDA, SBA 8(a), and USDA grant application narratives",
+      icon: PenLine,
+      path: "/grant-assistant",
+      stat: "Premium AI model",
+      gradient: "from-indigo-600/10 to-violet-500/10",
+      iconBg: "bg-indigo-600/10 text-indigo-600"
+    },
+    {
+      title: "Lender Marketplace",
+      desc: "Vetted CDFIs, SBA lenders, and mission-driven institutions ready to fund your business",
+      icon: Banknote,
+      path: "/lenders",
+      stat: "Free matching",
+      gradient: "from-emerald-600/10 to-green-500/10",
+      iconBg: "bg-emerald-600/10 text-emerald-600"
+    },
+    {
+      title: "Mentor & Advisor Network",
+      desc: "Connect with SCORE mentors, SBDC advisors, and specialized support organizations",
+      icon: Users,
+      path: "/mentors",
+      stat: "All free to access",
+      gradient: "from-violet-600/10 to-purple-500/10",
+      iconBg: "bg-violet-600/10 text-violet-600"
+    },
+    {
+      title: "National Impact Dashboard",
+      desc: "Real-time economic data across all 50 states for congressional and SBA reporting",
+      icon: Globe,
+      path: "/national",
+      stat: "Congressional-ready",
+      gradient: "from-primary/10 to-slate-600/10",
+      iconBg: "bg-primary/10 text-primary"
+    },
+    {
+      title: "Collaboration Outreach",
+      desc: "AI-generated emails to 20+ federal agencies, CDFIs, HBCUs, and partner organizations",
+      icon: Mail,
+      path: "/outreach",
+      stat: "20+ partner organizations",
+      gradient: "from-rose-600/10 to-pink-500/10",
+      iconBg: "bg-rose-600/10 text-rose-600"
+    },
   ];
 
   return (

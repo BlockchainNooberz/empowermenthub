@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { 
   LayoutDashboard, Landmark, Package, Award, BookOpen, 
-  ChevronLeft, ChevronRight, LogOut, Bot, BarChart2, LibraryBig, Sparkles
+  ChevronLeft, ChevronRight, LogOut, Bot, BarChart2, LibraryBig, Sparkles,
+  Globe, Banknote, Users, Mail, FileSearch, PenLine
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -17,6 +18,12 @@ const navItems = [
   { path: "/impact", label: "Impact Report", icon: BarChart2 },
   { path: "/resources", label: "SBA Resources", icon: LibraryBig },
   { path: "/blueprint", label: "Blueprint Builder", icon: Sparkles },
+  { path: "/grants", label: "Grants Finder", icon: FileSearch },
+  { path: "/grant-assistant", label: "Grant Writer", icon: PenLine },
+  { path: "/lenders", label: "Lender Marketplace", icon: Banknote },
+  { path: "/mentors", label: "Mentor Network", icon: Users },
+  { path: "/national", label: "National Dashboard", icon: Globe },
+  { path: "/outreach", label: "Collaboration Outreach", icon: Mail },
 ];
 
 export default function Sidebar() {
