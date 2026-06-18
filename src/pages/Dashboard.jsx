@@ -186,26 +186,38 @@ export default function Dashboard() {
     <PullToRefresh onRefresh={handleRefresh}>
     <div className="p-6 md:p-10 max-w-7xl mx-auto">
       {/* Hero Banner */}
-      <motion.div {...fadeIn} className="mb-10 relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary to-[#0a2565] p-8 shadow-xl">
-        <div className="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-red-500 to-red-700 rounded-l-2xl" />
-        <div className="absolute right-6 top-3 text-white/5 text-8xl select-none pointer-events-none leading-snug">
-          ★ ★ ★<br />★ ★ ★<br />★ ★ ★
+      <motion.div {...fadeIn} className="mb-10 relative overflow-hidden rounded-2xl shadow-xl" style={{ background: 'linear-gradient(135deg, #0A3161 0%, #0d3d7a 50%, #0A3161 100%)' }}>
+        {/* Red stripe accent left */}
+        <div className="absolute left-0 top-0 bottom-0 w-3 bg-gradient-to-b from-red-500 via-red-600 to-red-700 rounded-l-2xl" />
+        {/* White stripe accent */}
+        <div className="absolute left-3 top-0 bottom-0 w-1 bg-white/20" />
+        {/* Stars field */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+          <div className="absolute right-4 top-0 bottom-0 flex flex-col justify-center gap-3 opacity-20">
+            {[0,1,2,3,4].map(row => (
+              <div key={row} className="flex gap-4">
+                {[0,1,2,3,4,5].map(col => (
+                  <span key={col} className="text-white text-xl leading-none">★</span>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="pl-3 relative z-10">
+        <div className="pl-7 pr-6 py-8 relative z-10">
           <div className="flex items-center gap-2 mb-2">
-            
-            <span className="text-xs font-semibold text-accent uppercase tracking-widest">Prosperity forge</span>
+            <span className="text-accent text-lg">🇺🇸</span>
+            <span className="text-xs font-semibold text-accent uppercase tracking-widest">Prosperity Forge</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-heading font-bold text-white tracking-tight leading-tight mb-3">
             Building America's<br />Economic Future
           </h1>
-          <p className="text-white/70 text-base max-w-2xl mb-4">
-          Capital access, supply chain transparency, workforce credentialing, and technology education — unified for American economic growth.
+          <p className="text-white/75 text-base max-w-2xl mb-4">
+            Capital access, supply chain transparency, workforce credentialing, and technology education — unified for American economic growth.
           </p>
           <div className="flex flex-wrap gap-2">
             {["SBA Aligned", "SBDC Ready", "SCORE Network", "Made in America"].map((tag) =>
-              <span key={tag} className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/10 text-white/80 border border-white/20">{tag}</span>
-              )}
+              <span key={tag} className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/15 text-white border border-white/30">{tag}</span>
+            )}
           </div>
         </div>
       </motion.div>
@@ -274,30 +286,73 @@ export default function Dashboard() {
         <p className="text-sm text-muted-foreground mb-5">Affiliated projects in the ecosystem</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            { name: "Nexum Finance Core", url: "https://nexum-finance-core.base44.app", desc: "Core financial infrastructure & capital routing", gradient: "from-blue-600/10 to-cyan-600/10", iconBg: "bg-blue-600/10 text-blue-600" },
-            { name: "Secure Heir Vault", url: "https://secure-heir-vault.base44.app", desc: "Digital estate planning & wealth transfer security", gradient: "from-amber-600/10 to-yellow-500/10", iconBg: "bg-amber-600/10 text-amber-600" },
-            { name: "Wealth Nexus Beta", url: "https://wealth-nexus-beta.base44.app", desc: "Unified wealth management & investment hub", gradient: "from-emerald-600/10 to-teal-600/10", iconBg: "bg-emerald-600/10 text-emerald-600" },
-            { name: "World Equity Link", url: "https://world-equity-link.base44.app", desc: "Global equity access & cross-border investment", gradient: "from-violet-600/10 to-indigo-500/10", iconBg: "bg-violet-600/10 text-violet-600" },
-            { name: "Civic Rise Path", url: "https://civic-rise-path.base44.app", desc: "Civic engagement & community empowerment platform", gradient: "from-rose-600/10 to-pink-500/10", iconBg: "bg-rose-600/10 text-rose-600" },
+            {
+              name: "Nexum Institutional Finance",
+              url: "https://nexum-finance-core.base44.app",
+              desc: "Institutional banking platform integrating traditional assets & tokenized securities",
+              logo: "https://media.base44.com/images/public/6a2a1786a1ed8b9b66d62137/nexum-logo.png",
+              fallbackBg: "bg-gradient-to-br from-slate-800 to-slate-900",
+              fallbackText: "NI",
+              fallbackColor: "text-amber-400"
+            },
+            {
+              name: "LegacyVault",
+              url: "https://secure-heir-vault.base44.app",
+              desc: "Exclusive high-security private concierge & digital asset management platform",
+              logo: null,
+              fallbackBg: "bg-gradient-to-br from-amber-700 to-yellow-800",
+              fallbackText: "🔒",
+              fallbackColor: "text-white"
+            },
+            {
+              name: "Wealth Nexus",
+              url: "https://wealth-nexus-beta.base44.app",
+              desc: "Intuitive platform to manage, track, and visualize your financial growth & investments",
+              logo: null,
+              fallbackBg: "bg-gradient-to-br from-teal-600 to-emerald-700",
+              fallbackText: "WN",
+              fallbackColor: "text-white"
+            },
+            {
+              name: "Global Equity Nexus",
+              url: "https://world-equity-link.base44.app",
+              desc: "Centralized diplomatic & data intelligence platform connecting governments & institutions",
+              logo: null,
+              fallbackBg: "bg-gradient-to-br from-blue-500 to-indigo-600",
+              fallbackText: "🌐",
+              fallbackColor: "text-white"
+            },
+            {
+              name: "CivicRise",
+              url: "https://civic-rise-path.base44.app",
+              desc: "Comprehensive platform designed to facilitate civic engagement & community empowerment",
+              logo: null,
+              fallbackBg: "bg-gradient-to-br from-orange-500 to-yellow-500",
+              fallbackText: "CR",
+              fallbackColor: "text-white"
+            },
           ].map((project) => (
             <a
               key={project.url}
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group bg-gradient-to-br ${project.gradient} border border-border rounded-xl p-5 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 flex flex-col gap-3`}
+              className="group bg-card border border-border rounded-xl p-5 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 flex flex-col gap-3"
             >
               <div className="flex items-start justify-between">
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${project.iconBg}`}>
-                  <Globe className="w-5 h-5" />
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden flex-shrink-0 ${project.fallbackBg}`}>
+                  {project.logo
+                    ? <img src={project.logo} alt={project.name} className="w-full h-full object-cover" onError={e => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }} />
+                    : null}
+                  <span className={`text-lg font-bold ${project.fallbackColor} ${project.logo ? 'hidden' : 'flex'} items-center justify-center w-full h-full`}>{project.fallbackText}</span>
                 </div>
-                <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity mt-1" />
               </div>
               <div>
                 <h3 className="font-heading font-bold text-foreground">{project.name}</h3>
                 <p className="text-sm text-muted-foreground mt-1">{project.desc}</p>
               </div>
-              <span className="text-xs font-medium text-muted-foreground/80 truncate">{project.url.replace("https://", "")}</span>
+              <span className="text-xs font-medium text-muted-foreground/60 truncate">{project.url.replace("https://", "")}</span>
             </a>
           ))}
         </div>
