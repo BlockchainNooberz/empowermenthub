@@ -20,16 +20,30 @@ export default function PageHeroBanner({ icon, eyebrow, title, subtitle, tags = 
         </div>
       </div>
 
-      {/* ── Subtle stripes: thin accent bar on right edge only ── */}
-      <div className="absolute top-0 right-0 bottom-0 pointer-events-none select-none overflow-hidden" style={{ width: '8px' }}>
-        {[...Array(15)].map((_, i) => (
-          <div key={i} style={{ flex: 1, background: i % 2 === 0 ? '#B22234' : '#FFFFFF', opacity: 0.6, height: '100%' }} />
-        ))}
-        <div className="absolute inset-0" style={{ display: 'flex', flexDirection: 'column' }}>
-          {[...Array(15)].map((_, i) => (
-            <div key={i} style={{ flex: 1, background: i % 2 === 0 ? '#B22234' : '#FFFFFF', opacity: 0.7 }} />
+      {/* ── Diagonal stripes: solid on right, fade left to ~45% ── */}
+      <div className="absolute top-0 right-0 bottom-0 pointer-events-none select-none overflow-hidden" style={{ width: '60%' }}>
+        {/* The stripe block */}
+        <div className="absolute inset-0" style={{
+          transform: 'rotate(-15deg) translateX(8%) translateY(-5%) scaleY(1.4)',
+          transformOrigin: 'right center',
+        }}>
+          {[...Array(18)].map((_, i) => (
+            <div key={i} style={{
+              height: '20px',
+              width: '120%',
+              marginLeft: '-10%',
+              background: i % 2 === 0 ? '#B22234' : '#FFFFFF',
+            }} />
           ))}
         </div>
+        {/* Fade gradient: solid on right, transparent by ~45% from left */}
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(to right, transparent 0%, transparent 40%, rgba(8,24,56,0.15) 55%, rgba(8,24,56,0) 70%)',
+        }} />
+        {/* Left fade into banner bg */}
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(to left, transparent 40%, #081828 90%)',
+        }} />
       </div>
 
       {/* ── Red accent top border ── */}
