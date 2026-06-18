@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import {
   Landmark, Package, Award, BookOpen, TrendingUp, Users,
   DollarSign, ShieldCheck, ArrowRight, MapPin, Sparkles, Bot, BarChart2, LibraryBig,
-  Globe, Banknote, FileSearch, PenLine, Mail, Coins } from
+  Globe, Banknote, FileSearch, PenLine, Mail, Coins, ExternalLink } from
 "lucide-react";
 import { motion } from "framer-motion";
 import StatCard from "@/components/shared/StatCard";
@@ -265,6 +265,41 @@ export default function Dashboard() {
               </span>
             </Link>
             )}
+        </div>
+      </motion.div>
+
+      {/* Collaborations */}
+      <motion.div {...fadeIn} transition={{ delay: 0.25 }} className="mt-10">
+        <h2 className="text-xl font-heading font-bold mb-2">Collaborations</h2>
+        <p className="text-sm text-muted-foreground mb-5">Affiliated projects in the ecosystem</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { name: "Nexum Finance Core", url: "https://nexum-finance-core.base44.app", desc: "Core financial infrastructure & capital routing", gradient: "from-blue-600/10 to-cyan-600/10", iconBg: "bg-blue-600/10 text-blue-600" },
+            { name: "Secure Heir Vault", url: "https://secure-heir-vault.base44.app", desc: "Digital estate planning & wealth transfer security", gradient: "from-amber-600/10 to-yellow-500/10", iconBg: "bg-amber-600/10 text-amber-600" },
+            { name: "Wealth Nexus Beta", url: "https://wealth-nexus-beta.base44.app", desc: "Unified wealth management & investment hub", gradient: "from-emerald-600/10 to-teal-600/10", iconBg: "bg-emerald-600/10 text-emerald-600" },
+            { name: "World Equity Link", url: "https://world-equity-link.base44.app", desc: "Global equity access & cross-border investment", gradient: "from-violet-600/10 to-indigo-500/10", iconBg: "bg-violet-600/10 text-violet-600" },
+            { name: "Civic Rise Path", url: "https://civic-rise-path.base44.app", desc: "Civic engagement & community empowerment platform", gradient: "from-rose-600/10 to-pink-500/10", iconBg: "bg-rose-600/10 text-rose-600" },
+          ].map((project) => (
+            <a
+              key={project.url}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group bg-gradient-to-br ${project.gradient} border border-border rounded-xl p-5 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 flex flex-col gap-3`}
+            >
+              <div className="flex items-start justify-between">
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${project.iconBg}`}>
+                  <Globe className="w-5 h-5" />
+                </div>
+                <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+              <div>
+                <h3 className="font-heading font-bold text-foreground">{project.name}</h3>
+                <p className="text-sm text-muted-foreground mt-1">{project.desc}</p>
+              </div>
+              <span className="text-xs font-medium text-muted-foreground/80 truncate">{project.url.replace("https://", "")}</span>
+            </a>
+          ))}
         </div>
       </motion.div>
 
