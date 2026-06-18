@@ -7,12 +7,12 @@ export default function PageHeroBanner({ icon, eyebrow, title, subtitle, tags = 
     <div className="mb-8 relative overflow-hidden rounded-2xl shadow-lg min-h-[180px]"
       style={{ background: 'linear-gradient(135deg, #0A3161 0%, #0d3d7a 40%, #0A3161 100%)' }}>
 
-      {/* ── Stars field: top-left, behind text ── */}
-      <div className="absolute top-0 left-0 pointer-events-none select-none" style={{ width: '380px', height: '100%' }}>
+      {/* ── Stars field: fills top area behind text and above stripes ── */}
+      <div className="absolute top-0 left-0 right-0 pointer-events-none select-none" style={{ height: '100%' }}>
         <div className="absolute inset-0 opacity-[0.18]">
           {[...Array(6)].map((_, row) => (
             <div key={row} className="flex ml-3" style={{ marginTop: row === 0 ? '6px' : '2px', gap: '12px' }}>
-              {[...Array(row % 2 === 0 ? 5 : 4)].map((_, col) => (
+              {[...Array(row % 2 === 0 ? 10 : 9)].map((_, col) => (
                 <span key={col} className="text-white leading-none"
                   style={{ fontSize: '44px', marginLeft: row % 2 === 0 ? 0 : '16px' }}>★</span>
               ))}
