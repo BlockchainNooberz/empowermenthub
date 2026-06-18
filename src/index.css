@@ -6,43 +6,43 @@
 
 @layer base {
   :root {
-    /* All-American: Navy, Red, White */
-    --background: 210 20% 98%;
-    --foreground: 218 52% 12%;
-    --card: 0 0% 100%;
-    --card-foreground: 218 52% 12%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 218 52% 12%;
-    --primary: 218 71% 21%;       /* Deep Navy #0A3161 */
+    /* All-American: Deep Navy background, white text, red accents */
+    --background: 218 71% 12%;        /* Deep Navy page background */
+    --foreground: 0 0% 98%;            /* White text */
+    --card: 218 65% 16%;               /* Slightly lighter navy for cards */
+    --card-foreground: 0 0% 95%;       /* Near-white card text */
+    --popover: 218 65% 16%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 218 71% 21%;            /* Deep Navy #0A3161 */
     --primary-foreground: 0 0% 100%;
-    --secondary: 355 68% 42%;     /* American Red #B22234 */
+    --secondary: 355 68% 42%;          /* American Red #B22234 */
     --secondary-foreground: 0 0% 100%;
-    --muted: 215 20% 93%;
-    --muted-foreground: 215 12% 46%;
-    --accent: 45 93% 52%;         /* Gold */
+    --muted: 218 50% 22%;              /* Dark navy muted bg */
+    --muted-foreground: 215 25% 65%;   /* Soft blue-white for muted text */
+    --accent: 45 93% 52%;              /* Gold */
     --accent-foreground: 218 52% 12%;
     --destructive: 355 68% 42%;
     --destructive-foreground: 0 0% 98%;
-    --border: 215 20% 88%;
-    --input: 215 20% 88%;
-    --ring: 218 71% 21%;
-    --chart-1: 218 71% 21%;
-    --chart-2: 355 68% 42%;
-    --chart-3: 162 63% 41%;
+    --border: 218 45% 28%;             /* Subtle navy border */
+    --input: 218 50% 22%;
+    --ring: 45 93% 52%;                /* Gold ring */
+    --chart-1: 218 71% 55%;
+    --chart-2: 355 68% 55%;
+    --chart-3: 162 63% 55%;
     --chart-4: 45 93% 52%;
-    --chart-5: 220 60% 55%;
+    --chart-5: 220 60% 65%;
     --radius: 0.75rem;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
     --font-display: 'Playfair Display', serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    --sidebar-background: 218 71% 14%;   /* Darker navy */
+    --sidebar-background: 218 71% 9%;    /* Darkest navy sidebar */
     --sidebar-foreground: 215 30% 90%;
     --sidebar-primary: 355 68% 42%;      /* Red highlight */
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 218 71% 20%;
+    --sidebar-accent: 218 65% 16%;
     --sidebar-accent-foreground: 215 30% 90%;
-    --sidebar-border: 218 50% 22%;
+    --sidebar-border: 218 50% 20%;
     --sidebar-ring: 355 68% 42%;
     --success: 162 63% 41%;
     --success-foreground: 0 0% 100%;

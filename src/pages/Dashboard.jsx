@@ -51,8 +51,8 @@ export default function Dashboard() {
     icon: Landmark,
     path: "/lending",
     stat: `$${(totalFunding / 1000).toFixed(0)}K funded`,
-    gradient: "from-blue-600/10 to-indigo-600/10",
-    iconBg: "bg-blue-600/10 text-blue-600"
+    gradient: "from-blue-500/20 to-indigo-500/20",
+    iconBg: "bg-blue-400/20 text-blue-300"
   },
   {
     title: "Supply Chain",
@@ -60,8 +60,8 @@ export default function Dashboard() {
     icon: Package,
     path: "/supply-chain",
     stat: `${verifiedProducts} verified products`,
-    gradient: "from-emerald-600/10 to-teal-600/10",
-    iconBg: "bg-emerald-600/10 text-emerald-600"
+    gradient: "from-emerald-500/20 to-teal-500/20",
+    iconBg: "bg-emerald-400/20 text-emerald-300"
   },
   {
     title: "Skills Marketplace",
@@ -69,8 +69,8 @@ export default function Dashboard() {
     icon: Award,
     path: "/skills",
     stat: `${verifiedCreds} verified credentials`,
-    gradient: "from-amber-600/10 to-orange-600/10",
-    iconBg: "bg-amber-600/10 text-amber-600"
+    gradient: "from-amber-500/20 to-orange-500/20",
+    iconBg: "bg-amber-400/20 text-amber-300"
   },
   {
     title: "Education Hub",
@@ -78,8 +78,8 @@ export default function Dashboard() {
     icon: BookOpen,
     path: "/education",
     stat: `${totalDownloads.toLocaleString()} downloads`,
-    gradient: "from-violet-600/10 to-purple-600/10",
-    iconBg: "bg-violet-600/10 text-violet-600"
+    gradient: "from-violet-500/20 to-purple-500/20",
+    iconBg: "bg-violet-400/20 text-violet-300"
   },
   {
     title: "AI Business Advisor",
@@ -87,8 +87,8 @@ export default function Dashboard() {
     icon: Bot,
     path: "/advisor",
     stat: "Powered by AI",
-    gradient: "from-red-600/10 to-rose-600/10",
-    iconBg: "bg-red-600/10 text-red-600"
+    gradient: "from-red-500/20 to-rose-500/20",
+    iconBg: "bg-red-400/20 text-red-300"
   },
   {
     title: "Impact Report",
@@ -96,8 +96,8 @@ export default function Dashboard() {
     icon: BarChart2,
     path: "/impact",
     stat: "SBA + SCORE + SBDC aligned",
-    gradient: "from-primary/10 to-blue-800/10",
-    iconBg: "bg-primary/10 text-primary"
+    gradient: "from-sky-500/20 to-blue-600/20",
+    iconBg: "bg-sky-400/20 text-sky-300"
   },
   {
     title: "SBA Resource Center",
@@ -105,8 +105,8 @@ export default function Dashboard() {
     icon: LibraryBig,
     path: "/resources",
     stat: "Live SBA API data",
-    gradient: "from-teal-600/10 to-cyan-600/10",
-    iconBg: "bg-teal-600/10 text-teal-600"
+    gradient: "from-teal-500/20 to-cyan-500/20",
+    iconBg: "bg-teal-400/20 text-teal-300"
   },
   {
     title: "Blueprint Builder",
@@ -114,8 +114,8 @@ export default function Dashboard() {
     icon: Sparkles,
     path: "/blueprint",
     stat: "AI-generated documents",
-    gradient: "from-accent/10 to-yellow-500/10",
-    iconBg: "bg-accent/20 text-amber-600"
+    gradient: "from-yellow-500/20 to-amber-400/20",
+    iconBg: "bg-yellow-400/20 text-yellow-300"
   },
   {
     title: "Federal Grants Finder",
@@ -123,8 +123,8 @@ export default function Dashboard() {
     icon: FileSearch,
     path: "/grants",
     stat: "Live federal programs",
-    gradient: "from-sky-600/10 to-blue-500/10",
-    iconBg: "bg-sky-600/10 text-sky-600"
+    gradient: "from-sky-500/20 to-blue-400/20",
+    iconBg: "bg-sky-400/20 text-sky-300"
   },
   {
     title: "Grant Application Writer",
@@ -132,8 +132,8 @@ export default function Dashboard() {
     icon: PenLine,
     path: "/grant-assistant",
     stat: "Premium AI model",
-    gradient: "from-indigo-600/10 to-violet-500/10",
-    iconBg: "bg-indigo-600/10 text-indigo-600"
+    gradient: "from-indigo-500/20 to-violet-400/20",
+    iconBg: "bg-indigo-400/20 text-indigo-300"
   },
   {
     title: "Lender Marketplace",
@@ -141,8 +141,8 @@ export default function Dashboard() {
     icon: Banknote,
     path: "/lenders",
     stat: "Free matching",
-    gradient: "from-emerald-600/10 to-green-500/10",
-    iconBg: "bg-emerald-600/10 text-emerald-600"
+    gradient: "from-emerald-500/20 to-green-400/20",
+    iconBg: "bg-emerald-400/20 text-emerald-300"
   },
   {
     title: "Mentor & Advisor Network",
@@ -150,8 +150,8 @@ export default function Dashboard() {
     icon: Users,
     path: "/mentors",
     stat: "All free to access",
-    gradient: "from-violet-600/10 to-purple-500/10",
-    iconBg: "bg-violet-600/10 text-violet-600"
+    gradient: "from-violet-500/20 to-purple-400/20",
+    iconBg: "bg-violet-400/20 text-violet-300"
   },
   {
     title: "National Impact Dashboard",
@@ -159,8 +159,8 @@ export default function Dashboard() {
     icon: Globe,
     path: "/national",
     stat: "Congressional-ready",
-    gradient: "from-primary/10 to-slate-600/10",
-    iconBg: "bg-primary/10 text-primary"
+    gradient: "from-blue-500/20 to-slate-500/20",
+    iconBg: "bg-blue-400/20 text-blue-300"
   },
   {
     title: "Collaboration Outreach",
@@ -168,8 +168,8 @@ export default function Dashboard() {
     icon: Mail,
     path: "/outreach",
     stat: "20+ partner organizations",
-    gradient: "from-rose-600/10 to-pink-500/10",
-    iconBg: "bg-rose-600/10 text-rose-600"
+    gradient: "from-rose-500/20 to-pink-400/20",
+    iconBg: "bg-rose-400/20 text-rose-300"
   },
   {
     title: "Crypto, Web3 & Blockchain",
@@ -177,8 +177,8 @@ export default function Dashboard() {
     icon: Coins,
     path: "/crypto-web3",
     stat: "RWA • Stablecoin Payroll • DeFi Grants",
-    gradient: "from-violet-600/10 to-indigo-500/10",
-    iconBg: "bg-violet-600/10 text-violet-600"
+    gradient: "from-violet-500/20 to-indigo-400/20",
+    iconBg: "bg-violet-400/20 text-violet-300"
   }];
 
 
@@ -205,8 +205,8 @@ export default function Dashboard() {
         </div>
         <div className="pl-7 pr-6 py-8 relative z-10">
           <div className="flex items-center gap-2 mb-2">
-            
-            
+            <span className="text-accent text-lg hidden">🇺🇸</span>
+            <span className="font-semibold text-accent uppercase tracking-widest text-sm hidden">PROSPERITY FORGE</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-heading font-bold text-white tracking-tight leading-tight mb-3">
             Building America's<br />Economic Future
@@ -256,23 +256,23 @@ export default function Dashboard() {
 
       {/* Module Cards */}
       <motion.div {...fadeIn} transition={{ delay: 0.2 }}>
-        <h2 className="text-xl font-heading font-bold mb-5">Platform Modules</h2>
+        <h2 className="text-xl font-heading font-bold text-white mb-5">Platform Modules</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {modules.map((mod, i) =>
             <Link
               key={mod.path}
               to={mod.path}
-              className={`group relative bg-gradient-to-br ${mod.gradient} border border-border rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5`}>
+              className={`group relative bg-gradient-to-br ${mod.gradient} border border-white/10 rounded-xl p-6 hover:shadow-xl hover:border-white/20 transition-all duration-300 hover:-translate-y-0.5`}>
               
               <div className="flex items-start justify-between mb-4">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${mod.iconBg}`}>
                   <mod.icon className="w-6 h-6" />
                 </div>
-                <ArrowRight className="w-5 h-5 text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                <ArrowRight className="w-5 h-5 text-white/40 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
               </div>
-              <h3 className="text-lg font-heading font-bold text-foreground mb-1">{mod.title}</h3>
-              <p className="text-sm text-muted-foreground mb-3">{mod.desc}</p>
-              <span className="text-xs font-semibold text-foreground/70 bg-background/60 px-3 py-1 rounded-full">
+              <h3 className="text-lg font-heading font-bold text-white mb-1">{mod.title}</h3>
+              <p className="text-sm text-white/60 mb-3">{mod.desc}</p>
+              <span className="text-xs font-semibold text-white/80 bg-white/10 px-3 py-1 rounded-full">
                 {mod.stat}
               </span>
             </Link>
@@ -282,8 +282,8 @@ export default function Dashboard() {
 
       {/* Collaborations */}
       <motion.div {...fadeIn} transition={{ delay: 0.25 }} className="mt-10">
-        <h2 className="text-xl font-heading font-bold mb-2">Collaborations</h2>
-        <p className="text-sm text-muted-foreground mb-5">Affiliated projects in the ecosystem</p>
+        <h2 className="text-xl font-heading font-bold text-white mb-2">Collaborations</h2>
+        <p className="text-sm text-white/50 mb-5">Affiliated projects in the ecosystem</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
             {
@@ -337,7 +337,7 @@ export default function Dashboard() {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-card border border-border rounded-xl p-5 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 flex flex-col gap-3">
+              className="group bg-white/5 border border-white/10 rounded-xl p-5 hover:shadow-xl hover:bg-white/8 hover:border-white/20 transition-all duration-300 hover:-translate-y-0.5 flex flex-col gap-3">
               
               <div className="flex items-start justify-between">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden flex-shrink-0 ${project.fallbackBg}`}>
@@ -346,13 +346,13 @@ export default function Dashboard() {
                   null}
                   <span className={`text-lg font-bold ${project.fallbackColor} ${project.logo ? 'hidden' : 'flex'} items-center justify-center w-full h-full`}>{project.fallbackText}</span>
                 </div>
-                <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity mt-1" />
+                <ExternalLink className="w-4 h-4 text-white/40 opacity-0 group-hover:opacity-100 transition-opacity mt-1" />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-foreground">{project.name}</h3>
-                <p className="text-sm text-muted-foreground mt-1">{project.desc}</p>
+                <h3 className="font-heading font-bold text-white">{project.name}</h3>
+                <p className="text-sm text-white/60 mt-1">{project.desc}</p>
               </div>
-              <span className="text-xs font-medium text-muted-foreground/60 truncate">{project.url.replace("https://", "")}</span>
+              <span className="text-xs font-medium text-white/35 truncate">{project.url.replace("https://", "")}</span>
             </a>
             )}
         </div>
@@ -362,8 +362,8 @@ export default function Dashboard() {
       {loans.filter((l) => l.status === "seeking_funding" || l.status === "partially_funded").length > 0 &&
         <motion.div {...fadeIn} transition={{ delay: 0.3 }} className="mt-10">
           <div className="flex items-center justify-between mb-5">
-            <h2 className="text-xl font-heading font-bold">Active Funding Requests</h2>
-            <Link to="/lending" className="text-sm font-medium text-primary hover:underline flex items-center gap-1">
+            <h2 className="text-xl font-heading font-bold text-white">Active Funding Requests</h2>
+            <Link to="/lending" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
               View all <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -372,26 +372,26 @@ export default function Dashboard() {
             filter((l) => l.status === "seeking_funding" || l.status === "partially_funded").
             slice(0, 3).
             map((loan) =>
-            <div key={loan.id} className="bg-card border border-border rounded-xl p-5 hover:shadow-md transition-shadow">
+            <div key={loan.id} className="bg-white/5 border border-white/10 rounded-xl p-5 hover:shadow-md hover:border-white/20 transition-all">
                   <div className="flex items-start justify-between mb-3">
                     <div>
-                      <h3 className="font-semibold text-foreground">{loan.business_name}</h3>
+                      <h3 className="font-semibold text-white">{loan.business_name}</h3>
                       <div className="flex items-center gap-2 mt-1">
-                        <MapPin className="w-3.5 h-3.5 text-muted-foreground" />
-                        <span className="text-sm text-muted-foreground">{loan.location}</span>
+                        <MapPin className="w-3.5 h-3.5 text-white/40" />
+                        <span className="text-sm text-white/60">{loan.location}</span>
                         {loan.underserved_area &&
-                    <span className="text-[10px] uppercase tracking-wider bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full font-semibold">
+                    <span className="text-[10px] uppercase tracking-wider bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded-full font-semibold">
                             Underserved Area
                           </span>
                     }
                       </div>
                     </div>
-                    <span className="text-lg font-heading font-bold text-foreground">
+                    <span className="text-lg font-heading font-bold text-white">
                       ${loan.amount_requested?.toLocaleString()}
                     </span>
                   </div>
-                  <ProgressBar value={loan.amount_funded || 0} max={loan.amount_requested} barClass="bg-blue-600" />
-                  <div className="flex justify-between mt-2 text-xs text-muted-foreground">
+                  <ProgressBar value={loan.amount_funded || 0} max={loan.amount_requested} barClass="bg-blue-400" />
+                  <div className="flex justify-between mt-2 text-xs text-white/50">
                     <span>${(loan.amount_funded || 0).toLocaleString()} funded</span>
                     <span>{loan.lender_count || 0} lenders</span>
                   </div>
