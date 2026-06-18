@@ -194,19 +194,19 @@ export default function Dashboard() {
         {/* Stars field */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
           <div className="absolute right-4 top-0 bottom-0 flex flex-col justify-center gap-3 opacity-20">
-            {[0,1,2,3,4].map(row => (
+            {[0, 1, 2, 3, 4].map((row) =>
               <div key={row} className="flex gap-4">
-                {[0,1,2,3,4,5].map(col => (
-                  <span key={col} className="text-white text-xl leading-none">★</span>
-                ))}
+                {[0, 1, 2, 3, 4, 5].map((col) =>
+                <span key={col} className="text-white text-xl leading-none">★</span>
+                )}
               </div>
-            ))}
+              )}
           </div>
         </div>
         <div className="pl-7 pr-6 py-8 relative z-10">
           <div className="flex items-center gap-2 mb-2">
             <span className="text-accent text-lg">🇺🇸</span>
-            <span className="text-xs font-semibold text-accent uppercase tracking-widest">Prosperity Forge</span>
+            <span className="font-semibold text-accent uppercase tracking-widest text-sm">PROSPERITY FORGE</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-heading font-bold text-white tracking-tight leading-tight mb-3">
             Building America's<br />Economic Future
@@ -217,7 +217,7 @@ export default function Dashboard() {
           <div className="flex flex-wrap gap-2">
             {["SBA Aligned", "SBDC Ready", "SCORE Network", "Made in America"].map((tag) =>
               <span key={tag} className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/15 text-white border border-white/30">{tag}</span>
-            )}
+              )}
           </div>
         </div>
       </motion.div>
@@ -330,20 +330,20 @@ export default function Dashboard() {
               fallbackBg: "bg-gradient-to-br from-orange-500 to-yellow-500",
               fallbackText: "CR",
               fallbackColor: "text-white"
-            },
-          ].map((project) => (
+            }].
+            map((project) =>
             <a
               key={project.url}
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-card border border-border rounded-xl p-5 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 flex flex-col gap-3"
-            >
+              className="group bg-card border border-border rounded-xl p-5 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 flex flex-col gap-3">
+              
               <div className="flex items-start justify-between">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden flex-shrink-0 ${project.fallbackBg}`}>
-                  {project.logo
-                    ? <img src={project.logo} alt={project.name} className="w-full h-full object-cover" onError={e => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }} />
-                    : null}
+                  {project.logo ?
+                  <img src={project.logo} alt={project.name} className="w-full h-full object-cover" onError={(e) => {e.target.style.display = 'none';e.target.nextSibling.style.display = 'flex';}} /> :
+                  null}
                   <span className={`text-lg font-bold ${project.fallbackColor} ${project.logo ? 'hidden' : 'flex'} items-center justify-center w-full h-full`}>{project.fallbackText}</span>
                 </div>
                 <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity mt-1" />
@@ -354,7 +354,7 @@ export default function Dashboard() {
               </div>
               <span className="text-xs font-medium text-muted-foreground/60 truncate">{project.url.replace("https://", "")}</span>
             </a>
-          ))}
+            )}
         </div>
       </motion.div>
 
