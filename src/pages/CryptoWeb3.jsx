@@ -3,9 +3,10 @@ import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import PageHeroBanner from "@/components/shared/PageHeroBanner";
+import { Link } from "react-router-dom";
 import {
   Coins, Globe, Building2, Users, ShieldCheck, Zap, ExternalLink,
-  ChevronDown, ChevronUp, Sparkles, Loader2
+  ChevronDown, ChevronUp, Sparkles, Loader2, TrendingUp
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
@@ -95,6 +96,28 @@ const SECTIONS = [
     ]
   },
   {
+    id: "onchain_credit",
+    icon: TrendingUp,
+    color: "from-blue-500/20 to-indigo-500/20",
+    iconBg: "bg-blue-400/20 text-blue-300",
+    title: "On-Chain Credit Scores — Moody's & D&B (New 2026)",
+    summary: "Moody's has initiated blockchain-native credit scoring on Solana. Dun & Bradstreet integration is projected to follow — transforming how small businesses access capital using their on-chain history.",
+    points: [
+      "Moody's launched on-chain credit scoring infrastructure on Solana in 2026",
+      "Scores combine wallet age, transaction volume, DeFi interactions, and payment history",
+      "Traditional letter grades (Aaa–C) now assigned to Solana wallet addresses",
+      "D&B projected to link DUNS numbers to on-chain identities (hypothetical)",
+      "DeFi lending protocols (Maple, Goldfinch) consume scores for instant credit decisions",
+      "Small businesses can build credit history purely through on-chain activity",
+      "SBA and CDFI lenders exploring API integration for underserved borrowers",
+    ],
+    links: [
+      { label: "Try the On-Chain Credit Demo →", url: "/crypto-web3/credit" },
+      { label: "Moody's Analytics", url: "https://www.moodys.com" },
+      { label: "Solana Foundation", url: "https://solana.org" },
+    ]
+  },
+  {
     id: "compliance",
     icon: ShieldCheck,
     color: "from-red-600/10 to-rose-500/10",
@@ -151,7 +174,7 @@ export default function CryptoWeb3() {
       {/* Sections */}
       <div className="space-y-4 mb-10">
         {SECTIONS.map(section => (
-          <div key={section.id} className={`rounded-xl border border-border bg-gradient-to-br ${section.color} overflow-hidden`}>
+          <div key={section.id} className={`rounded-xl border border-white/10 bg-gradient-to-br ${section.color} overflow-hidden`}>
             <button
               className="w-full flex items-center gap-4 p-5 text-left"
               onClick={() => toggle(section.id)}
@@ -160,8 +183,8 @@ export default function CryptoWeb3() {
                 <section.icon className="w-5 h-5" />
               </div>
               <div className="flex-1">
-                <h3 className="font-heading font-bold text-foreground">{section.title}</h3>
-                <p className="text-sm text-muted-foreground mt-0.5 line-clamp-2">{section.summary}</p>
+                <h3 className="font-heading font-bold text-white">{section.title}</h3>
+                <p className="text-sm text-white/55 mt-0.5 line-clamp-2">{section.summary}</p>
               </div>
               {expanded[section.id]
                 ? <ChevronUp className="w-5 h-5 text-muted-foreground flex-shrink-0" />
@@ -169,44 +192,54 @@ export default function CryptoWeb3() {
             </button>
 
             {expanded[section.id] && (
-              <div className="px-5 pb-5 space-y-4 border-t border-border/50">
-                <ul className="space-y-2 mt-4">
-                  {section.points.map((pt, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                      {pt}
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {section.links.map((link, i) => (
+            <div className="px-5 pb-5 space-y-4 border-t border-white/10">
+              <ul className="space-y-2 mt-4">
+                {section.points.map((pt, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-white/75">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                    {pt}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-2 pt-2">
+                {section.links.map((link, i) => (
+                  link.url.startsWith("/") ? (
+                    <Link
+                      key={i}
+                      to={link.url}
+                      className="inline-flex items-center gap-1.5 text-xs font-medium text-accent border border-accent/30 bg-accent/10 hover:bg-accent/20 px-3 py-1.5 rounded-full transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
                     <a
                       key={i}
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-medium text-primary border border-primary/30 bg-primary/5 hover:bg-primary/10 px-3 py-1.5 rounded-full transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium text-white/60 border border-white/15 bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-full transition-colors"
                     >
                       {link.label}
                       <ExternalLink className="w-3 h-3" />
                     </a>
-                  ))}
-                </div>
+                  )
+                ))}
               </div>
+            </div>
             )}
           </div>
         ))}
       </div>
 
       {/* AI Q&A */}
-      <div className="rounded-2xl border border-border bg-card p-6">
+      <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
         <div className="flex items-center gap-2 mb-4">
-          <div className="w-8 h-8 rounded-lg bg-violet-600/10 flex items-center justify-center">
-            <Sparkles className="w-4 h-4 text-violet-600" />
+          <div className="w-8 h-8 rounded-lg bg-violet-400/20 flex items-center justify-center">
+            <Sparkles className="w-4 h-4 text-violet-300" />
           </div>
           <div>
-            <h3 className="font-heading font-bold">Ask the Web3 Advisor</h3>
-            <p className="text-xs text-muted-foreground">Get AI-powered answers on tokenization, stablecoin payroll, grants & compliance</p>
+            <h3 className="font-heading font-bold text-white">Ask the Web3 Advisor</h3>
+            <p className="text-xs text-white/45">Get AI-powered answers on tokenization, stablecoin payroll, grants & compliance</p>
           </div>
         </div>
         <Textarea
@@ -219,8 +252,8 @@ export default function CryptoWeb3() {
           {aiLoading ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Analyzing...</> : <><Sparkles className="w-4 h-4 mr-2" /> Get Web3 Guidance</>}
         </Button>
         {aiResponse && (
-          <div className="mt-5 p-4 rounded-xl bg-muted/50 border border-border">
-            <ReactMarkdown className="prose prose-sm max-w-none text-foreground [&>*:first-child]:mt-0">
+          <div className="mt-5 p-4 rounded-xl bg-black/20 border border-white/10">
+            <ReactMarkdown className="prose prose-sm max-w-none prose-invert prose-p:text-white/75 prose-li:text-white/70 prose-strong:text-white [&>*:first-child]:mt-0">
               {aiResponse}
             </ReactMarkdown>
           </div>
