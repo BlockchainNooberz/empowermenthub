@@ -8,13 +8,13 @@ export default function PageHeroBanner({ icon, eyebrow, title, subtitle, tags = 
       style={{ background: 'linear-gradient(135deg, #0A3161 0%, #0d3d7a 40%, #0A3161 100%)' }}>
 
       {/* ── Stars field: top-left, behind text ── */}
-      <div className="absolute top-0 left-0 pointer-events-none select-none" style={{ width: '320px', height: '100%' }}>
+      <div className="absolute top-0 left-0 pointer-events-none select-none" style={{ width: '380px', height: '100%' }}>
         <div className="absolute inset-0 opacity-[0.18]">
-          {[...Array(9)].map((_, row) => (
-            <div key={row} className="flex gap-[16px] ml-3" style={{ marginTop: row === 0 ? '8px' : '6px' }}>
-              {[...Array(row % 2 === 0 ? 6 : 5)].map((_, col) => (
+          {[...Array(6)].map((_, row) => (
+            <div key={row} className="flex ml-3" style={{ marginTop: row === 0 ? '6px' : '2px', gap: '12px' }}>
+              {[...Array(row % 2 === 0 ? 5 : 4)].map((_, col) => (
                 <span key={col} className="text-white leading-none"
-                  style={{ fontSize: '22px', marginLeft: row % 2 === 0 ? 0 : '10px' }}>★</span>
+                  style={{ fontSize: '44px', marginLeft: row % 2 === 0 ? 0 : '16px' }}>★</span>
               ))}
             </div>
           ))}
@@ -23,7 +23,7 @@ export default function PageHeroBanner({ icon, eyebrow, title, subtitle, tags = 
 
       {/* ── Flowing flag stripes: diagonal bottom-right ── */}
       <div className="absolute bottom-0 right-0 pointer-events-none select-none overflow-hidden"
-        style={{ width: '65%', height: '100%' }}>
+        style={{ width: '55%', height: '100%' }}>
         <div className="absolute inset-0"
           style={{
             transform: 'rotate(-18deg) translateX(5%) translateY(15%)',
@@ -43,7 +43,7 @@ export default function PageHeroBanner({ icon, eyebrow, title, subtitle, tags = 
         {/* Fade-out gradient so stripes blend into navy on the left/top edges */}
         <div className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to right, #0A3161 0%, #0A3161 15%, transparent 50%), linear-gradient(to bottom, #0A3161 0%, transparent 35%)',
+            background: 'linear-gradient(to right, #0A3161 0%, #0A3161 10%, transparent 45%), linear-gradient(to bottom, #0A3161 0%, transparent 30%)',
           }}
         />
       </div>
