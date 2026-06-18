@@ -205,8 +205,8 @@ export default function Dashboard() {
         </div>
         <div className="pl-7 pr-6 py-8 relative z-10">
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-accent text-lg">🇺🇸</span>
-            <span className="font-semibold text-accent uppercase tracking-widest text-sm">PROSPERITY FORGE</span>
+            <span className="text-accent text-lg hidden">🇺🇸</span>
+            <span className="font-semibold text-accent uppercase tracking-widest text-sm hidden">PROSPERITY FORGE</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-heading font-bold text-white tracking-tight leading-tight mb-3">
             Building America's<br />Economic Future
