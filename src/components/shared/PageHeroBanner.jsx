@@ -8,13 +8,13 @@ export default function PageHeroBanner({ icon, eyebrow, title, subtitle, tags = 
       style={{ background: 'linear-gradient(135deg, #0A3161 0%, #0d3d7a 40%, #0A3161 100%)' }}>
 
       {/* ── Stars field: top-left, behind text ── */}
-      <div className="absolute top-0 left-0 pointer-events-none select-none" style={{ width: '260px', height: '160px' }}>
-        <div className="absolute inset-0 opacity-[0.12]">
-          {[...Array(7)].map((_, row) => (
-            <div key={row} className="flex gap-[14px] ml-3" style={{ marginTop: row === 0 ? '10px' : '4px' }}>
+      <div className="absolute top-0 left-0 pointer-events-none select-none" style={{ width: '320px', height: '100%' }}>
+        <div className="absolute inset-0 opacity-[0.18]">
+          {[...Array(9)].map((_, row) => (
+            <div key={row} className="flex gap-[16px] ml-3" style={{ marginTop: row === 0 ? '8px' : '6px' }}>
               {[...Array(row % 2 === 0 ? 6 : 5)].map((_, col) => (
-                <span key={col} className="text-white text-[15px] leading-none"
-                  style={{ marginLeft: row % 2 === 0 ? 0 : '7px' }}>★</span>
+                <span key={col} className="text-white leading-none"
+                  style={{ fontSize: '22px', marginLeft: row % 2 === 0 ? 0 : '10px' }}>★</span>
               ))}
             </div>
           ))}
@@ -29,7 +29,7 @@ export default function PageHeroBanner({ icon, eyebrow, title, subtitle, tags = 
             transform: 'rotate(-18deg) translateX(5%) translateY(15%)',
             transformOrigin: 'bottom right',
           }}>
-          {[...Array(13)].map((_, i) => (
+          {[...Array(15)].map((_, i) => (
             <div key={i}
               style={{
                 height: '20px',
