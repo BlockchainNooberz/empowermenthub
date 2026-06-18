@@ -35,11 +35,15 @@ export default function Sidebar() {
 
   return (
     <aside className={cn(
-      "fixed left-0 top-0 h-full bg-sidebar text-sidebar-foreground z-40 flex flex-col transition-all duration-300 border-r border-sidebar-border",
+      "fixed left-0 top-0 h-full text-sidebar-foreground z-40 flex flex-col transition-all duration-300 border-r border-sidebar-border",
       collapsed ? "w-[72px]" : "w-[260px]"
-    )}>
+    )}
+      style={{ background: 'linear-gradient(180deg, #060f1f 0%, #081828 60%, #060f1f 100%)', borderRightColor: 'rgba(178,34,52,0.3)' }}>
+      {/* Red top accent line */}
+      <div className="h-[3px] w-full flex-shrink-0" style={{ background: 'linear-gradient(to right, #B22234, #cc2a3d, #B22234)' }} />
+
       {/* Logo */}
-      <div className="p-5 flex items-center gap-3 border-b border-sidebar-border">
+      <div className="p-5 flex items-center gap-3 border-b border-sidebar-border" style={{ borderBottomColor: 'rgba(255,255,255,0.08)' }}>
         <div className="w-9 h-9 rounded-lg bg-sidebar-primary flex items-center justify-center flex-shrink-0 font-heading font-bold text-white text-base">
           🇺🇸
         </div>
