@@ -44,7 +44,7 @@ export default function Sidebar() {
         </div>
         {!collapsed &&
         <div className="overflow-hidden">
-            <h1 className="font-heading text-lg font-bold text-sidebar-foreground leading-tight">ProsperityForge</h1>
+            <h1 className="font-heading text-lg font-bold leading-tight text-[#d0c206]">ProsperityForge</h1>
             <p className="text-[10px] uppercase tracking-[0.2em] text-sidebar-foreground/50">Economic Platform</p>
           </div>
         }
