@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import {
   Landmark, Package, Award, BookOpen, TrendingUp, Users,
   DollarSign, ShieldCheck, ArrowRight, MapPin, Sparkles, Bot, BarChart2, LibraryBig,
-  Globe, Banknote, FileSearch, PenLine, Mail } from
+  Globe, Banknote, FileSearch, PenLine, Mail, Coins } from
 "lucide-react";
 import { motion } from "framer-motion";
 import StatCard from "@/components/shared/StatCard";
@@ -170,6 +170,15 @@ export default function Dashboard() {
     stat: "20+ partner organizations",
     gradient: "from-rose-600/10 to-pink-500/10",
     iconBg: "bg-rose-600/10 text-rose-600"
+  },
+  {
+    title: "Crypto, Web3 & Blockchain",
+    desc: "Tokenize real-world assets, pay employees with stablecoins, access Web3 grants & navigate US crypto regulations",
+    icon: Coins,
+    path: "/crypto-web3",
+    stat: "RWA • Stablecoin Payroll • DeFi Grants",
+    gradient: "from-violet-600/10 to-indigo-500/10",
+    iconBg: "bg-violet-600/10 text-violet-600"
   }];
 
 

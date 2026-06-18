@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import {
   LayoutDashboard, Landmark, Package, Award, BookOpen,
   ChevronLeft, ChevronRight, LogOut, Bot, BarChart2, LibraryBig, Sparkles,
-  Globe, Banknote, Users, Mail, FileSearch, PenLine, Settings } from
+  Globe, Banknote, Users, Mail, FileSearch, PenLine, Settings, Coins } from
 "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -24,6 +24,7 @@ const navItems = [
 { path: "/mentors", label: "Mentor Network", icon: Users },
 { path: "/national", label: "National Dashboard", icon: Globe },
 { path: "/outreach", label: "Collaboration Outreach", icon: Mail },
+{ path: "/crypto-web3", label: "Crypto & Web3", icon: Coins },
 { path: "/settings", label: "Settings", icon: Settings }];
 
 

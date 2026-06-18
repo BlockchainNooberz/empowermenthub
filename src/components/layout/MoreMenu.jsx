@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import {
   Package, Award, BookOpen, LibraryBig, FileSearch, PenLine,
-  Banknote, Users, Globe, Mail, X, LogOut, Settings
+  Banknote, Users, Globe, Mail, X, LogOut, Settings, Coins
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { base44 } from "@/api/base44Client";
@@ -17,6 +17,7 @@ const moreItems = [
   { path: "/mentors", label: "Mentor Network", icon: Users },
   { path: "/national", label: "National Dashboard", icon: Globe },
   { path: "/outreach", label: "Collaboration Outreach", icon: Mail },
+  { path: "/crypto-web3", label: "Crypto & Web3", icon: Coins },
   { path: "/settings", label: "Settings", icon: Settings },
 ];
 

@@ -31,6 +31,7 @@ const NationalDashboard = lazy(() => import('@/pages/NationalDashboard'));
 const MentorMatch = lazy(() => import('@/pages/MentorMatch'));
 const CollaborationOutreach = lazy(() => import('@/pages/CollaborationOutreach'));
 const GrantAssistant = lazy(() => import('@/pages/GrantAssistant'));
+const CryptoWeb3 = lazy(() => import('@/pages/CryptoWeb3'));
 const Settings = lazy(() => import('@/pages/Settings'));
 
 function PageLoader() {
@@ -88,6 +89,7 @@ const AuthenticatedApp = () => {
           <Route path="/mentors" element={<Suspense fallback={<PageLoader />}><MentorMatch /></Suspense>} />
           <Route path="/outreach" element={<Suspense fallback={<PageLoader />}><CollaborationOutreach /></Suspense>} />
           <Route path="/grant-assistant" element={<Suspense fallback={<PageLoader />}><GrantAssistant /></Suspense>} />
+          <Route path="/crypto-web3" element={<Suspense fallback={<PageLoader />}><CryptoWeb3 /></Suspense>} />
           <Route path="/settings" element={<Suspense fallback={<PageLoader />}><Settings /></Suspense>} />
         </Route>
       </Route>
