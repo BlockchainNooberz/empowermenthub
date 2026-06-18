@@ -33,6 +33,7 @@ const CollaborationOutreach = lazy(() => import('@/pages/CollaborationOutreach')
 const GrantAssistant = lazy(() => import('@/pages/GrantAssistant'));
 const CryptoWeb3 = lazy(() => import('@/pages/CryptoWeb3'));
 const OnChainCredit = lazy(() => import('@/pages/OnChainCredit'));
+const CryptoTax = lazy(() => import('@/pages/CryptoTax'));
 const Settings = lazy(() => import('@/pages/Settings'));
 
 function PageLoader() {
@@ -92,6 +93,7 @@ const AuthenticatedApp = () => {
           <Route path="/grant-assistant" element={<Suspense fallback={<PageLoader />}><GrantAssistant /></Suspense>} />
           <Route path="/crypto-web3" element={<Suspense fallback={<PageLoader />}><CryptoWeb3 /></Suspense>} />
           <Route path="/crypto-web3/credit" element={<Suspense fallback={<PageLoader />}><OnChainCredit /></Suspense>} />
+          <Route path="/crypto-tax" element={<Suspense fallback={<PageLoader />}><CryptoTax /></Suspense>} />
           <Route path="/settings" element={<Suspense fallback={<PageLoader />}><Settings /></Suspense>} />
         </Route>
       </Route>
