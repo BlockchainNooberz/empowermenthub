@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ReactMarkdown from "react-markdown";
+import MilestoneTracker from "@/components/blueprint/MilestoneTracker";
 
 const DOCUMENT_TYPES = [
   { id: "business_structure", label: "Business Structure", icon: "🏛️", desc: "LLC, S-Corp, C-Corp, Sole Prop — with pros/cons and recommended path" },
@@ -127,6 +128,11 @@ Format with clear headings (##), bullet points, and tables where helpful. Be spe
         <p className="text-muted-foreground max-w-2xl">
           Describe your business in plain English. We'll generate every foundational document you need — from legal structure to tax strategy to operating manual — tailored specifically to your idea.
         </p>
+      </div>
+
+      {/* Milestone Tracker */}
+      <div className="mb-8">
+        <MilestoneTracker />
       </div>
 
       {/* Input Section */}
