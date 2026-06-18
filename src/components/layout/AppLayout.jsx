@@ -1,46 +1,38 @@
-import { Outlet } from "react-router-dom";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Outlet, useLocation } from "react-router-dom";
 import Sidebar from "./Sidebar";
+import BottomTabBar from "./BottomTabBar";
+import MobileHeader from "./MobileHeader";
 
 export default function AppLayout() {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Mobile header */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-card border-b border-border px-4 py-3 flex items-center justify-between">
-        <button onClick={() => setMobileOpen(true)}>
-          <Menu className="w-6 h-6 text-foreground" />
-        </button>
-        <span className="font-heading font-bold text-foreground">EmpowerHub</span>
-        <div className="w-6" />
+      {/* Mobile layout */}
+      <div className="lg:hidden flex flex-col h-screen">
+        <MobileHeader />
+        <main
+          className="flex-1 overflow-y-auto overscroll-none"
+          style={{
+            paddingTop: "calc(env(safe-area-inset-top) + 3.5rem)",
+            paddingBottom: "calc(env(safe-area-inset-bottom) + 4rem)",
+            paddingLeft: "env(safe-area-inset-left)",
+            paddingRight: "env(safe-area-inset-right)",
+            overscrollBehavior: "none",
+          }}
+        >
+          <Outlet />
+        </main>
+        <BottomTabBar />
       </div>
 
-      {/* Mobile overlay */}
-      {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 z-50">
-          <div className="absolute inset-0 bg-black/50" onClick={() => setMobileOpen(false)} />
-          <div className="relative">
-            <Sidebar />
-            <button
-              onClick={() => setMobileOpen(false)}
-              className="absolute top-4 right-4 w-8 h-8 bg-sidebar-accent rounded-lg flex items-center justify-center text-sidebar-foreground z-50"
-            >
-              <X className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Desktop sidebar */}
-      <div className="hidden lg:block">
+      {/* Desktop layout */}
+      <div className="hidden lg:flex">
         <Sidebar />
+        <main className="ml-[260px] min-h-screen flex-1">
+          <Outlet />
+        </main>
       </div>
-
-      <main className="lg:ml-[260px] min-h-screen pt-14 lg:pt-0 transition-all duration-300">
-        <Outlet />
-      </main>
     </div>
   );
 }

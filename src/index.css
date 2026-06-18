@@ -92,5 +92,19 @@
   }
   body {
     @apply bg-background text-foreground font-body;
+    overscroll-behavior: none;
   }
+  button, a, nav, [role="tab"], [role="button"] {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  p, span, h1, h2, h3, h4, h5, h6, li, td, th, label {
+    user-select: text;
+    -webkit-user-select: text;
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }

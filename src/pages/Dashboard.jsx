@@ -1,5 +1,6 @@
 import { base44 } from "@/api/base44Client";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import PullToRefresh from "@/components/layout/PullToRefresh";
 import { Link } from "react-router-dom";
 import { 
   Landmark, Package, Award, BookOpen, TrendingUp, Users, 
@@ -17,6 +18,9 @@ const fadeIn = {
 };
 
 export default function Dashboard() {
+  const queryClient = useQueryClient();
+  const handleRefresh = async () => { await queryClient.invalidateQueries(); };
+
   const { data: loans = [] } = useQuery({
     queryKey: ["loans"],
     queryFn: () => base44.entities.LoanRequest.list(),
@@ -170,6 +174,7 @@ export default function Dashboard() {
   ];
 
   return (
+    <PullToRefresh onRefresh={handleRefresh}>
     <div className="p-6 md:p-10 max-w-7xl mx-auto">
       {/* Hero Banner */}
       <motion.div {...fadeIn} className="mb-10 relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary to-[#0a2565] p-8 shadow-xl">
@@ -297,5 +302,6 @@ export default function Dashboard() {
         </motion.div>
       )}
     </div>
+    </PullToRefresh>
   );
 }
