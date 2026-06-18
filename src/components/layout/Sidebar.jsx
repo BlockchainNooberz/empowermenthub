@@ -51,7 +51,7 @@ export default function Sidebar() {
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 py-4 px-3 space-y-1">
+      <nav className="flex-1 py-4 px-3 space-y-1 overflow-y-auto overflow-x-hidden scrollbar-thin" style={{ scrollbarWidth: 'thin', scrollbarColor: 'rgba(255,255,255,0.1) transparent' }}>
         {navItems.map(({ path, label, icon: Icon }) => {
           const isActive = location.pathname === path ||
           path !== "/" && location.pathname.startsWith(path);
