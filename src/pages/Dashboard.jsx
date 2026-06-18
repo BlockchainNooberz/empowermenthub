@@ -185,7 +185,7 @@ export default function Dashboard() {
         <div className="pl-3 relative z-10">
           <div className="flex items-center gap-2 mb-2">
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-xs font-semibold text-accent uppercase tracking-widest">🇺🇸 Prosper</span>
+            <span className="text-xs font-semibold text-accent uppercase tracking-widest">🇺🇸 Prosperity forge</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-heading font-bold text-white tracking-tight leading-tight mb-3">
             Building America's<br />Economic Future
