@@ -6,8 +6,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Button } from "@/components/ui/button";
 import { Package, Search, ShieldCheck, Users, Factory, Plus } from "lucide-react";
 import { motion } from "framer-motion";
-import PageHeader from "@/components/shared/PageHeader";
 import StatCard from "@/components/shared/StatCard";
+import PageHeroBanner from "@/components/shared/PageHeroBanner";
 import ProductCard from "@/components/supplychain/ProductCard";
 import ProductDetailModal from "@/components/supplychain/ProductDetailModal";
 
@@ -39,14 +39,13 @@ export default function SupplyChain() {
 
   return (
     <div className="p-6 md:p-10 max-w-7xl mx-auto">
-      <PageHeader
+      <PageHeroBanner
+        icon="🏭"
+        eyebrow="Made in America"
         title="Supply Chain Transparency"
         subtitle="Track American-made products from raw materials to your hands. Support domestic manufacturing with verified data."
-      >
-        <Button className="bg-primary hover:bg-primary/90">
-          <Plus className="w-4 h-4 mr-2" /> Register Product
-        </Button>
-      </PageHeader>
+        tags={["Verified Products", "Domestic Content", "American Jobs"]}
+      />
 
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
         <StatCard title="Verified Products" value={verified} icon={ShieldCheck} accentClass="bg-emerald-600/10 text-emerald-600" />

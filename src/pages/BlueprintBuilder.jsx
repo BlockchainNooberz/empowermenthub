@@ -10,6 +10,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import MilestoneTracker from "@/components/blueprint/MilestoneTracker";
+import PageHeroBanner from "@/components/shared/PageHeroBanner";
 
 const DOCUMENT_TYPES = [
   { id: "business_structure", label: "Business Structure", icon: "🏛️", desc: "LLC, S-Corp, C-Corp, Sole Prop — with pros/cons and recommended path" },
@@ -118,17 +119,13 @@ Format with clear headings (##), bullet points, and tables where helpful. Be spe
 
   return (
     <div className="p-6 md:p-10 max-w-5xl mx-auto">
-      {/* Header */}
-      <div className="mb-8">
-        <div className="flex items-center gap-2 mb-2">
-          <Sparkles className="w-5 h-5 text-accent" />
-          <span className="text-xs font-bold uppercase tracking-widest text-accent">AI-Powered</span>
-        </div>
-        <h1 className="text-3xl font-heading font-bold text-foreground mb-2">Business Blueprint Builder</h1>
-        <p className="text-muted-foreground max-w-2xl">
-          Describe your business in plain English. We'll generate every foundational document you need — from legal structure to tax strategy to operating manual — tailored specifically to your idea.
-        </p>
-      </div>
+      <PageHeroBanner
+        icon="✨"
+        eyebrow="AI-Powered"
+        title="Business Blueprint Builder"
+        subtitle="Describe your business in plain English. We'll generate every foundational document you need — from legal structure to tax strategy to operating manual — tailored specifically to your idea."
+        tags={["Business Plan", "Legal Structure", "Financials", "Branding", "Operations"]}
+      />
 
       {/* Milestone Tracker */}
       <div className="mb-8">

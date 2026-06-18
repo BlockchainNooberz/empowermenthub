@@ -2,7 +2,7 @@ import { useState } from "react";
 import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import PageHeader from "@/components/shared/PageHeader";
+import PageHeroBanner from "@/components/shared/PageHeroBanner";
 import {
   Coins, Globe, Building2, Users, ShieldCheck, Zap, ExternalLink,
   ChevronDown, ChevronUp, Sparkles, Loader2
@@ -140,28 +140,13 @@ export default function CryptoWeb3() {
 
   return (
     <div className="p-6 md:p-10 max-w-5xl mx-auto">
-      <PageHeader
+      <PageHeroBanner
+        icon="🔗"
+        eyebrow="Web3 Business Integration"
         title="Crypto, Web3 & Blockchain"
         subtitle="Tokenize real-world assets, pay staff with stablecoins, access Web3 grants, and navigate US crypto regulations — all in one place."
+        tags={["RWA Tokenization", "Stablecoin Payroll", "DeFi Lending", "Web3 Grants", "FIT21 Compliant"]}
       />
-
-      {/* Hero banner */}
-      <div className="mb-8 rounded-2xl bg-gradient-to-r from-violet-700 to-indigo-800 p-6 text-white shadow-xl relative overflow-hidden">
-        <div className="absolute right-4 top-2 text-white/5 text-7xl select-none pointer-events-none">⬡⬡⬡</div>
-        <div className="flex items-center gap-2 mb-2">
-          <Globe className="w-5 h-5 text-violet-300" />
-          <span className="text-xs font-bold uppercase tracking-widest text-violet-300">Web3 Business Integration</span>
-        </div>
-        <h2 className="text-xl font-heading font-bold mb-2">The Future of American Business Finance</h2>
-        <p className="text-white/70 text-sm max-w-2xl">
-          From tokenizing your equipment as on-chain assets to paying remote contractors in USDC — blockchain tools are now practical, compliant, and accessible for Main Street businesses.
-        </p>
-        <div className="flex flex-wrap gap-2 mt-4">
-          {["RWA Tokenization", "Stablecoin Payroll", "DeFi Lending", "Web3 Grants", "FIT21 Compliant"].map(tag => (
-            <span key={tag} className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/10 border border-white/20">{tag}</span>
-          ))}
-        </div>
-      </div>
 
       {/* Sections */}
       <div className="space-y-4 mb-10">

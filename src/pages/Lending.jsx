@@ -6,8 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Landmark, Search, Filter, DollarSign, Users, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
-import PageHeader from "@/components/shared/PageHeader";
 import StatCard from "@/components/shared/StatCard";
+import PageHeroBanner from "@/components/shared/PageHeroBanner";
 import LoanCard from "@/components/lending/LoanCard";
 import LoanDetailModal from "@/components/lending/LoanDetailModal";
 
@@ -39,14 +39,13 @@ export default function Lending() {
 
   return (
     <div className="p-6 md:p-10 max-w-7xl mx-auto">
-      <PageHeader
+      <PageHeroBanner
+        icon="🏦"
+        eyebrow="Community Capital"
         title="Capital Access"
         subtitle="Community-powered lending connecting local investors with small businesses in underserved areas."
-      >
-        <Button className="bg-primary hover:bg-primary/90">
-          <Landmark className="w-4 h-4 mr-2" /> Request a Loan
-        </Button>
-      </PageHeader>
+        tags={["SBA Aligned", "CDFI Network", "Underserved Communities"]}
+      />
 
       {/* Stats */}
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">

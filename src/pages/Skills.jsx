@@ -6,8 +6,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Button } from "@/components/ui/button";
 import { Award, Search, ShieldCheck, ThumbsUp, Users, Plus } from "lucide-react";
 import { motion } from "framer-motion";
-import PageHeader from "@/components/shared/PageHeader";
 import StatCard from "@/components/shared/StatCard";
+import PageHeroBanner from "@/components/shared/PageHeroBanner";
 import CredentialCard from "@/components/skills/CredentialCard";
 
 export default function Skills() {
@@ -34,14 +34,13 @@ export default function Skills() {
 
   return (
     <div className="p-6 md:p-10 max-w-7xl mx-auto">
-      <PageHeader
+      <PageHeroBanner
+        icon="🎖️"
+        eyebrow="Workforce Credentialing"
         title="Skills Marketplace"
         subtitle="Decentralized credentialing system that helps workers verify skills and employers discover verified talent across industries."
-      >
-        <Button className="bg-primary hover:bg-primary/90">
-          <Plus className="w-4 h-4 mr-2" /> Add Credential
-        </Button>
-      </PageHeader>
+        tags={["Verified Skills", "SCORE Aligned", "SBDC Ready"]}
+      />
 
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
         <StatCard title="Verified Credentials" value={verified} icon={ShieldCheck} accentClass="bg-emerald-600/10 text-emerald-600" />

@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Search, Star, MapPin, Award, MessageSquare, Loader2, Users } from "lucide-react";
 import { motion } from "framer-motion";
-import PageHeader from "@/components/shared/PageHeader";
+import PageHeroBanner from "@/components/shared/PageHeroBanner";
 
 const MENTORS = [
   { name: "SCORE Mentors", org: "SCORE National Network", type: "SCORE", expertise: ["Business Planning", "Finance", "Marketing", "Operations"], locations: "500+ chapters nationwide", free: true, description: "Experienced volunteers (retired & active executives) offering free, confidential business mentoring.", url: "https://www.score.org/find-mentor", availability: "In-person & virtual" },
@@ -49,7 +49,13 @@ Also mention any specialized industry associations, accelerators, or incubators 
 
   return (
     <div className="p-6 md:p-10 max-w-5xl mx-auto">
-      <PageHeader title="Mentor & Advisor Network" subtitle="Connect with SCORE mentors, SBDC advisors, and specialized support organizations — all free to access." />
+      <PageHeroBanner
+        icon="🤝"
+        eyebrow="Expert Guidance"
+        title="Mentor & Advisor Network"
+        subtitle="Connect with SCORE mentors, SBDC advisors, and specialized support organizations — all free to access."
+        tags={["SCORE", "SBDC", "Free Access", "All Industries"]}
+      />
 
       {/* AI Matcher */}
       <div className="bg-gradient-to-r from-violet-600/5 to-purple-600/5 border border-violet-200 rounded-xl p-6 mb-8">

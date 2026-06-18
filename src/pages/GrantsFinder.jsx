@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Search, Loader2, ExternalLink, DollarSign, Calendar, Building2, Filter } from "lucide-react";
 import { motion } from "framer-motion";
-import PageHeader from "@/components/shared/PageHeader";
+import PageHeroBanner from "@/components/shared/PageHeroBanner";
 
 const CATEGORIES = ["All", "Small Business", "Women-Owned", "Veteran-Owned", "Minority-Owned", "Rural", "Technology", "Manufacturing", "Agriculture"];
 
@@ -56,7 +56,13 @@ Format as clear markdown with headers per grant. Be specific and actionable.`,
 
   return (
     <div className="p-6 md:p-10 max-w-5xl mx-auto">
-      <PageHeader title="Federal Grants Finder" subtitle="Discover SAM.gov, USASpending, Grants.gov, and SBA programs tailored to your business." />
+      <PageHeroBanner
+        icon="🔎"
+        eyebrow="Federal Funding"
+        title="Federal Grants Finder"
+        subtitle="Discover SAM.gov, USASpending, Grants.gov, and SBA programs tailored to your business."
+        tags={["SBIR", "EDA", "USDA", "AI Matched"]}
+      />
 
       {/* AI-Powered Search */}
       <div className="bg-gradient-to-r from-primary/5 to-blue-600/5 border border-primary/20 rounded-xl p-6 mb-8">

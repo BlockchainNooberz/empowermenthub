@@ -6,8 +6,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Button } from "@/components/ui/button";
 import { BookOpen, Search, Download, Users, Star, Plus } from "lucide-react";
 import { motion } from "framer-motion";
-import PageHeader from "@/components/shared/PageHeader";
 import StatCard from "@/components/shared/StatCard";
+import PageHeroBanner from "@/components/shared/PageHeroBanner";
 import ResourceCard from "@/components/education/ResourceCard";
 
 export default function Education() {
@@ -36,14 +36,13 @@ export default function Education() {
 
   return (
     <div className="p-6 md:p-10 max-w-7xl mx-auto">
-      <PageHeader
+      <PageHeroBanner
+        icon="📚"
+        eyebrow="Innovation Education"
         title="Education Hub"
         subtitle="Collaborative platform where institutions share resources and develop cutting-edge curriculum for emerging technologies."
-      >
-        <Button className="bg-primary hover:bg-primary/90">
-          <Plus className="w-4 h-4 mr-2" /> Share Resource
-        </Button>
-      </PageHeader>
+        tags={["HBCU Partners", "AI & Robotics", "Open Access"]}
+      />
 
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
         <StatCard title="Total Downloads" value={totalDownloads.toLocaleString()} icon={Download} accentClass="bg-blue-600/10 text-blue-600" />

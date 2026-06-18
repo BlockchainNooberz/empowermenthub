@@ -4,7 +4,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { DollarSign, Users, ShieldCheck, Flag, Star, Download, TrendingUp, Package, BookOpen, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import PageHeader from "@/components/shared/PageHeader";
+import PageHeroBanner from "@/components/shared/PageHeroBanner";
 import { jsPDF } from "jspdf";
 
 const PARTNERS = [
@@ -109,32 +109,17 @@ export default function ImpactReport() {
 
   return (
     <div className="p-6 md:p-10 max-w-7xl mx-auto">
-      <PageHeader
+      <PageHeroBanner
+        icon="🇺🇸"
+        eyebrow="National Economic Platform"
         title="Impact Report"
         subtitle="Demonstrating measurable economic value for SBA, SBDC, SCORE, Made in America, and communities nationwide."
+        tags={["SBA Aligned", "SBDC Ready", "SCORE Network", "Made in America"]}
       >
-        <Button onClick={exportPDF} variant="outline" className="gap-2">
+        <Button onClick={exportPDF} variant="outline" size="sm" className="border-white/30 text-white hover:bg-white/10 hover:text-white gap-2">
           <Download className="w-4 h-4" /> Export PDF
         </Button>
-      </PageHeader>
-
-      {/* Hero Banner */}
-      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-        className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary via-primary to-[#0a2960] p-7 mb-8 border border-primary/20">
-        <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-red-600 to-red-700 rounded-l-2xl" />
-        <div className="absolute right-8 top-4 text-white/5 text-7xl select-none pointer-events-none leading-tight">
-          ★ ★ ★<br/>★ ★ ★<br/>★ ★ ★
-        </div>
-        <div className="pl-4 relative z-10">
-          <p className="text-accent text-xs font-semibold uppercase tracking-widest mb-2">🇺🇸 National Economic Platform</p>
-          <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-2">
-            Strengthening American Economic Infrastructure
-          </h2>
-          <p className="text-white/70 text-sm max-w-2xl">
-            A unified digital platform connecting capital access, workforce credentialing, domestic supply chain transparency, and collaborative education — built for communities, institutions, and government partners.
-          </p>
-        </div>
-      </motion.div>
+      </PageHeroBanner>
 
       {/* Key Metrics Grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">

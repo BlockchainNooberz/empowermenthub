@@ -4,8 +4,8 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { MapPin, TrendingUp, Users, DollarSign, Package, Award, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import PageHeader from "@/components/shared/PageHeader";
 import StatCard from "@/components/shared/StatCard";
+import PageHeroBanner from "@/components/shared/PageHeroBanner";
 
 const COLORS = ["#0A3161", "#B22234", "#3b82f6", "#10b981", "#f59e0b", "#8b5cf6"];
 
@@ -75,11 +75,17 @@ export default function NationalDashboard() {
 
   return (
     <div className="p-6 md:p-10 max-w-7xl mx-auto">
-      <PageHeader title="National Impact Dashboard" subtitle="Real-time economic data across all 50 states — for congressional reporting, SBA alignment, and public transparency.">
-        <Button variant="outline" onClick={downloadReport}>
-          <Download className="w-4 h-4 mr-2" /> Export Report
+      <PageHeroBanner
+        icon="🗺️"
+        eyebrow="National Impact"
+        title="National Impact Dashboard"
+        subtitle="Real-time economic data across all 50 states — for congressional reporting, SBA alignment, and public transparency."
+        tags={["Congressional-Ready", "50 States", "SBA Aligned", "Live Data"]}
+      >
+        <Button variant="outline" size="sm" onClick={downloadReport} className="border-white/30 text-white hover:bg-white/10 hover:text-white gap-2">
+          <Download className="w-4 h-4" /> Export Report
         </Button>
-      </PageHeader>
+      </PageHeroBanner>
 
       {/* KPI Cards */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">

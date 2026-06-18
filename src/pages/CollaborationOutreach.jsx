@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Copy, CheckCircle2, Loader2, RefreshCw, Search, Building2, Globe, ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import PageHeader from "@/components/shared/PageHeader";
+import PageHeroBanner from "@/components/shared/PageHeroBanner";
 
 const COLLABORATORS = [
   // Federal Agencies
@@ -125,7 +125,13 @@ Format: Subject line first, then the email body. No placeholders — write it re
 
   return (
     <div className="p-6 md:p-10 max-w-5xl mx-auto">
-      <PageHeader title="Collaboration Outreach" subtitle="Generate personalized outreach emails to federal agencies, CDFIs, universities, and partner organizations for national adoption." />
+      <PageHeroBanner
+        icon="✉️"
+        eyebrow="Partnership Development"
+        title="Collaboration Outreach"
+        subtitle="Generate personalized outreach emails to federal agencies, CDFIs, universities, and partner organizations for national adoption."
+        tags={["Federal Agencies", "CDFIs", "HBCUs", "20+ Partners"]}
+      />
 
       {/* Context */}
       <div className="bg-card border border-border rounded-xl p-5 mb-6">

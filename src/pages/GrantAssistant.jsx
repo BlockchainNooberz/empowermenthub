@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, Loader2, Download, ChevronDown, ChevronUp, CheckCircle2, FileText } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import PageHeader from "@/components/shared/PageHeader";
+import PageHeroBanner from "@/components/shared/PageHeroBanner";
 
 const GRANT_TYPES = [
   { id: "sbir_phase1", label: "SBIR Phase I", icon: "🔬", agency: "NSF/NIH/DoD/SBA", desc: "R&D innovation grant, up to $275K" },
@@ -86,7 +86,13 @@ Make it specific to the ${grant.label} requirements. Use the business informatio
 
   return (
     <div className="p-6 md:p-10 max-w-4xl mx-auto">
-      <PageHeader title="Grant Application Assistant" subtitle="AI writes your SBIR, EDA, USDA, SBA 8(a), and other federal grant applications — tailored to your business." />
+      <PageHeroBanner
+        icon="✍️"
+        eyebrow="AI Grant Writer"
+        title="Grant Application Assistant"
+        subtitle="AI writes your SBIR, EDA, USDA, SBA 8(a), and other federal grant applications — tailored to your business."
+        tags={["SBIR", "EDA", "SBA 8(a)", "USDA", "Premium AI"]}
+      />
 
       <div className="mb-2 flex items-center gap-2">
         <span className="text-xs text-amber-700 font-semibold bg-amber-50 border border-amber-200 px-2 py-1 rounded-full">Uses premium AI model — higher quality output</span>

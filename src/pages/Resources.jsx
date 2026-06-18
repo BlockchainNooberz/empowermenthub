@@ -6,7 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MapPin, Search, BookOpen, ExternalLink, Loader2, Building2, Ruler, Users, HandHeart } from "lucide-react";
-import PageHeader from "@/components/shared/PageHeader";
+import PageHeroBanner from "@/components/shared/PageHeroBanner";
 
 const STATES = {
   AL:"Alabama",AK:"Alaska",AZ:"Arizona",AR:"Arkansas",CA:"California",CO:"Colorado",
@@ -162,9 +162,12 @@ export default function Resources() {
 
   return (
     <div className="p-6 md:p-10 max-w-6xl mx-auto">
-      <PageHeader
+      <PageHeroBanner
+        icon="🏛️"
+        eyebrow="Federal Resources"
         title="SBA Resource Center"
-        subtitle="Find local assistance, browse SBA programs, and look up size standards"
+        subtitle="Find local assistance, browse SBA programs, and look up size standards."
+        tags={["SBA Programs", "SBDC Offices", "SCORE Network", "Size Standards"]}
       />
 
       <Tabs defaultValue="programs" className="mt-6">

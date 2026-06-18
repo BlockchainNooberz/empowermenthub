@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Search, MapPin, DollarSign, Star, ExternalLink, Phone, Globe, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
-import PageHeader from "@/components/shared/PageHeader";
+import PageHeroBanner from "@/components/shared/PageHeroBanner";
 
 const LENDERS = [
   { name: "Accion Opportunity Fund", type: "CDFI", states: "Nationwide", minLoan: 5000, maxLoan: 250000, focus: ["Minority-Owned", "Women-Owned", "Startups"], rating: 4.8, description: "Mission-driven CDFI offering affordable small business loans to underserved entrepreneurs.", url: "https://www.accionopportunityfund.org", phone: "1-800-606-2811" },
@@ -50,7 +50,13 @@ Also suggest any additional SBA programs or CDFIs not listed that might be a gre
 
   return (
     <div className="p-6 md:p-10 max-w-5xl mx-auto">
-      <PageHeader title="Lender Marketplace" subtitle="Vetted CDFIs, SBA lenders, and mission-driven financial institutions ready to fund American small businesses." />
+      <PageHeroBanner
+        icon="💵"
+        eyebrow="Capital Access"
+        title="Lender Marketplace"
+        subtitle="Vetted CDFIs, SBA lenders, and mission-driven financial institutions ready to fund American small businesses."
+        tags={["CDFIs", "SBA Lenders", "Free Matching", "Nationwide"]}
+      />
 
       {/* AI Matcher */}
       <div className="bg-gradient-to-r from-emerald-600/5 to-teal-600/5 border border-emerald-200 rounded-xl p-6 mb-8">
