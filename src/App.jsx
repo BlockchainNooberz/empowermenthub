@@ -73,24 +73,22 @@ const AuthenticatedApp = () => {
 
       <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
         <Route element={<AppLayout />}>
-          <Suspense fallback={<PageLoader />}>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/lending" element={<Lending />} />
-            <Route path="/supply-chain" element={<SupplyChain />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/advisor" element={<AIAssistant />} />
-            <Route path="/impact" element={<ImpactReport />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/blueprint" element={<BlueprintBuilder />} />
-            <Route path="/grants" element={<GrantsFinder />} />
-            <Route path="/lenders" element={<LenderMarketplace />} />
-            <Route path="/national" element={<NationalDashboard />} />
-            <Route path="/mentors" element={<MentorMatch />} />
-            <Route path="/outreach" element={<CollaborationOutreach />} />
-            <Route path="/grant-assistant" element={<GrantAssistant />} />
-            <Route path="/settings" element={<Settings />} />
-          </Suspense>
+          <Route path="/" element={<Suspense fallback={<PageLoader />}><Dashboard /></Suspense>} />
+          <Route path="/lending" element={<Suspense fallback={<PageLoader />}><Lending /></Suspense>} />
+          <Route path="/supply-chain" element={<Suspense fallback={<PageLoader />}><SupplyChain /></Suspense>} />
+          <Route path="/skills" element={<Suspense fallback={<PageLoader />}><Skills /></Suspense>} />
+          <Route path="/education" element={<Suspense fallback={<PageLoader />}><Education /></Suspense>} />
+          <Route path="/advisor" element={<Suspense fallback={<PageLoader />}><AIAssistant /></Suspense>} />
+          <Route path="/impact" element={<Suspense fallback={<PageLoader />}><ImpactReport /></Suspense>} />
+          <Route path="/resources" element={<Suspense fallback={<PageLoader />}><Resources /></Suspense>} />
+          <Route path="/blueprint" element={<Suspense fallback={<PageLoader />}><BlueprintBuilder /></Suspense>} />
+          <Route path="/grants" element={<Suspense fallback={<PageLoader />}><GrantsFinder /></Suspense>} />
+          <Route path="/lenders" element={<Suspense fallback={<PageLoader />}><LenderMarketplace /></Suspense>} />
+          <Route path="/national" element={<Suspense fallback={<PageLoader />}><NationalDashboard /></Suspense>} />
+          <Route path="/mentors" element={<Suspense fallback={<PageLoader />}><MentorMatch /></Suspense>} />
+          <Route path="/outreach" element={<Suspense fallback={<PageLoader />}><CollaborationOutreach /></Suspense>} />
+          <Route path="/grant-assistant" element={<Suspense fallback={<PageLoader />}><GrantAssistant /></Suspense>} />
+          <Route path="/settings" element={<Suspense fallback={<PageLoader />}><Settings /></Suspense>} />
         </Route>
       </Route>
 
