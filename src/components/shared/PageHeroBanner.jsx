@@ -23,30 +23,27 @@ export default function PageHeroBanner({ icon, eyebrow, title, subtitle, tags = 
 
       {/* ── Flowing flag stripes: diagonal bottom-right ── */}
       <div className="absolute bottom-0 right-0 pointer-events-none select-none overflow-hidden"
-        style={{ width: '55%', height: '100%' }}>
+        style={{ width: '65%', height: '100%' }}>
         <div className="absolute inset-0"
           style={{
-            transform: 'rotate(-15deg) translateX(10%) translateY(25%)',
-            transformOrigin: 'center center',
+            transform: 'rotate(-18deg) translateX(5%) translateY(15%)',
+            transformOrigin: 'bottom right',
           }}>
-          {[...Array(9)].map((_, i) => (
+          {[...Array(13)].map((_, i) => (
             <div key={i}
               style={{
-                height: '18px',
-                width: '200%',
-                marginLeft: '-20%',
-                background: i % 2 === 0
-                  ? 'rgba(178, 34, 52, 0.35)'
-                  : 'rgba(255, 255, 255, 0.08)',
-                borderRadius: '2px',
+                height: '20px',
+                width: '250%',
+                marginLeft: '-30%',
+                background: i % 2 === 0 ? '#B22234' : '#FFFFFF',
               }}
             />
           ))}
         </div>
-        {/* Fade-out gradient so stripes blend into navy */}
+        {/* Fade-out gradient so stripes blend into navy on the left/top edges */}
         <div className="absolute inset-0"
           style={{
-            background: 'linear-gradient(to right, #0A3161 0%, transparent 40%), linear-gradient(to top, transparent 0%, #0A3161 95%)',
+            background: 'linear-gradient(to right, #0A3161 0%, #0A3161 15%, transparent 50%), linear-gradient(to bottom, #0A3161 0%, transparent 35%)',
           }}
         />
       </div>
