@@ -6,7 +6,8 @@ import PageHeroBanner from "@/components/shared/PageHeroBanner";
 import { Link } from "react-router-dom";
 import {
   Coins, Globe, Building2, Users, ShieldCheck, Zap, ExternalLink,
-  ChevronDown, ChevronUp, Sparkles, Loader2, TrendingUp
+  ChevronDown, ChevronUp, Sparkles, Loader2, TrendingUp,
+  BookOpen, FileCode2, Wallet, Network, Image as ImageIcon, Boxes, PieChart, GraduationCap
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
@@ -118,6 +119,182 @@ const SECTIONS = [
     ]
   },
   {
+    id: "fundamentals",
+    icon: BookOpen,
+    color: "from-sky-600/10 to-cyan-500/10",
+    iconBg: "bg-sky-600/10 text-sky-400",
+    title: "Blockchain Fundamentals — The New Digital Economy",
+    summary: "Understand the core technology behind Web3: distributed ledgers, consensus mechanisms, blocks, nodes, and why blockchain is reshaping finance, supply chains, and ownership.",
+    points: [
+      "A blockchain is a shared, immutable ledger replicated across a network of computers (nodes)",
+      "Blocks are chained via cryptographic hashes — altering one block invalidates every block after it",
+      "Consensus mechanisms: Proof of Work (Bitcoin), Proof of Stake (Ethereum, Solana, Cardano)",
+      "Public chains (Ethereum, Solana) vs permissioned/consortium chains (Hyperledger, Quorum)",
+      "Layer 1 (base chain) vs Layer 2 (rollups like Arbitrum, Optimism, Base) for scaling",
+      "Gas fees = transaction costs paid to validators for processing operations on-chain",
+      "Block explorers (Etherscan, Solscan) let anyone audit transactions transparently",
+    ],
+    links: [
+      { label: "Ethereum.org — Learn the Basics", url: "https://ethereum.org/learn" },
+      { label: "Solana — What is Blockchain?", url: "https://solana.com/learn" },
+      { label: "MIT OpenCourseWare — Blockchain & Money", url: "https://ocw.mit.edu/courses/15-s12-blockchain-and-money-fall-2018" },
+    ]
+  },
+  {
+    id: "smart_contracts",
+    icon: FileCode2,
+    color: "from-indigo-600/10 to-blue-500/10",
+    iconBg: "bg-indigo-600/10 text-indigo-400",
+    title: "Smart Contracts — Programmable Money",
+    summary: "Self-executing code on the blockchain that automatically enforces agreements — no lawyers, no escrow agents. Smart contracts power DeFi, tokenization, DAOs, and automated business logic.",
+    points: [
+      "Code executes automatically when predefined conditions are met — trustless agreements",
+      "Solidity (Ethereum), Rust (Solana), Move (Aptos/Sui) are the main smart contract languages",
+      "Escrow without middlemen: funds release only when goods/services are confirmed delivered",
+      "Automate recurring payments, revenue splits, royalties, and supplier payouts",
+      "Immutable once deployed — upgrades require proxy patterns or new contract versions",
+      "Auditing is critical: bugs can lock funds permanently (use OpenZeppelin, CertiK)",
+      "Business use cases: insurance payouts, supply chain automation, token vesting, escrow",
+    ],
+    links: [
+      { label: "Solidity by Example", url: "https://solidity-by-example.org" },
+      { label: "OpenZeppelin Contracts Library", url: "https://openzeppelin.com/contracts" },
+      { label: "Solana Smart Contracts (Solana Cookbook)", url: "https://solanacookbook.com" },
+    ]
+  },
+  {
+    id: "defi",
+    icon: Network,
+    color: "from-emerald-600/10 to-green-500/10",
+    iconBg: "bg-emerald-600/10 text-emerald-400",
+    title: "DeFi — Decentralized Finance",
+    summary: "Open financial infrastructure — lending, borrowing, trading, and earning yield — without banks or brokerages. Accessible to anyone with an internet connection, 24/7.",
+    points: [
+      "Lending & borrowing: Aave, Compound — earn yield on stablecoins or borrow against crypto",
+      "Decentralized exchanges (DEXs): Uniswap, Jupiter, Curve — trade without an order book",
+      "Liquidity pools: users provide assets and earn trading fees in return",
+      "Yield farming & staking: earn rewards for providing capital or validating transactions",
+      "Flash loans: borrow millions with no collateral, repaid within a single transaction",
+      "Oracles (Chainlink) feed real-world data (prices, rates) into DeFi smart contracts",
+      "Risks: smart contract bugs, impermanent loss, depegging events, rug pulls",
+    ],
+    links: [
+      { label: "Aave — Decentralized Lending", url: "https://aave.com" },
+      { label: "Uniswap — DEX Protocol", url: "https://uniswap.org" },
+      { label: "DeFi Llama — Track TVL Across Chains", url: "https://defillama.com" },
+    ]
+  },
+  {
+    id: "wallets",
+    icon: Wallet,
+    color: "from-amber-600/10 to-orange-500/10",
+    iconBg: "bg-amber-600/10 text-amber-400",
+    title: "Wallets & Custody — Self-Sovereign Ownership",
+    summary: "A crypto wallet is your digital identity and bank account combined. Learn the difference between hot wallets, cold storage, seed phrases, and institutional custody solutions.",
+    points: [
+      "Self-custody = YOU control your keys ('not your keys, not your coins')",
+      "Hot wallets (MetaMask, Phantom): connected to internet — convenient but less secure",
+      "Cold wallets / hardware (Ledger, Trezor, GridPlus): offline — highest security for large holdings",
+      "Seed phrase (12–24 words) is the master key — store offline, never share, never type online",
+      "Multi-sig (Gnosis Safe): requires multiple approvals to move funds — ideal for business treasury",
+      "Institutional custody: Coinbase Prime, Fireblocks, BitGo — regulated, insured, API-driven",
+      "Wallet security: enable 2FA on exchange accounts, verify addresses, beware phishing",
+    ],
+    links: [
+      { label: "MetaMask — Ethereum Wallet", url: "https://metamask.io" },
+      { label: "Ledger — Hardware Wallet", url: "https://www.ledger.com" },
+      { label: "Fireblocks — Enterprise Custody", url: "https://www.fireblocks.com" },
+    ]
+  },
+  {
+    id: "nfts",
+    icon: ImageIcon,
+    color: "from-pink-600/10 to-fuchsia-500/10",
+    iconBg: "bg-pink-600/10 text-pink-400",
+    title: "NFTs & Digital Assets — Beyond JPEGs",
+    summary: "Non-fungible tokens prove verifiable ownership of unique digital and physical assets — from real estate titles and event tickets to membership passes and IP licensing.",
+    points: [
+      "NFTs are unique, indivisible tokens — unlike fungible crypto (each Bitcoin is identical)",
+      "Tokenize: event tickets, memberships, music royalties, art, patents, and certificates",
+      "Soulbound tokens (SBTs): non-transferable NFTs for credentials, diplomas, and reputation",
+      "Royalties: creators earn automatic resale royalties coded into the smart contract",
+      "Standards: ERC-721, ERC-1155 (semi-fungible), Solana Metaplex",
+      "Marketplaces: OpenSea, Magic Eden, Blur, Rarible",
+      "Business use: loyalty programs, supply chain provenance, event ticketing, credentialing",
+    ],
+    links: [
+      { label: "OpenSea — NFT Marketplace", url: "https://opensea.io" },
+      { label: "Magic Eden — Multi-chain NFT", url: "https://magiceden.io" },
+      { label: "Metaplex — Solana NFT Standard", url: "https://www.metaplex.com" },
+    ]
+  },
+  {
+    id: "daos",
+    icon: Boxes,
+    color: "from-violet-600/10 to-purple-500/10",
+    iconBg: "bg-violet-600/10 text-violet-400",
+    title: "DAOs — Decentralized Autonomous Organizations",
+    summary: "Member-owned communities governed by smart contracts and token voting — no CEO, no board. DAOs manage treasuries, make collective decisions, and coordinate global teams.",
+    points: [
+      "Members hold governance tokens that grant voting power proportional to holdings",
+      "Proposals are submitted on-chain and executed automatically when approved by majority",
+      "Wyoming became the first US state to legally recognize DAOs as LLCs (2021)",
+      "Treasury management: DAOs often hold millions in stablecoins and governance tokens",
+      "Tools: Snapshot (off-chain voting), Tally (on-chain governance), Aragon, DAOstack",
+      "Business models: investment DAOs, grant DAOs, collector DAOs, protocol DAOs",
+      "Legal wrapper: Wyoming DAO LLC or DUNA (Decentralized Unincorporated Nonprofit Association)",
+    ],
+    links: [
+      { label: "Aragon — Build a DAO", url: "https://aragon.org" },
+      { label: "Snapshot — Governance Voting", url: "https://snapshot.org" },
+      { label: "DeepDAO — DAO Analytics", url: "https://deepdao.io" },
+    ]
+  },
+  {
+    id: "tokenomics",
+    icon: PieChart,
+    color: "from-teal-600/10 to-cyan-500/10",
+    iconBg: "bg-teal-600/10 text-teal-400",
+    title: "Tokenomics & Token Types — Designing Digital Assets",
+    summary: "Not all tokens are the same. Learn the difference between utility, governance, payment, and security tokens — and how tokenomics (supply, distribution, incentives) drives value.",
+    points: [
+      "Utility tokens: access a product or service (e.g., ETH pays for Ethereum gas)",
+      "Governance tokens: voting rights in a DAO or protocol (UNI, COMP, AAVE)",
+      "Security tokens: regulated investment contracts representing equity or debt (Howey Test)",
+      "Stablecoins: pegged to fiat — USDC (USD), DAI (crypto-collateralized), USDT",
+      "CBDCs: Central Bank Digital Currencies — FedNow, digital dollar exploration",
+      "Tokenomics: max supply, circulating supply, inflation rate, vesting schedules, burn mechanisms",
+      "SAFTs (Simple Agreement for Future Tokens) — compliant fundraising structure",
+    ],
+    links: [
+      { label: "CoinGecko — Token Data & Market Cap", url: "https://www.coingecko.com" },
+      { label: "Token Terminal — On-chain Analytics", url: "https://www.tokenterminal.com" },
+      { label: "SEC Howey Test — Investment Contracts", url: "https://www.sec.gov/corpfin/framework-investment-contract-analysis-higgins" },
+    ]
+  },
+  {
+    id: "web3_careers",
+    icon: GraduationCap,
+    color: "from-blue-600/10 to-sky-500/10",
+    iconBg: "bg-blue-600/10 text-blue-400",
+    title: "Web3 Careers & Skills — Building the Future",
+    summary: "The digital economy is creating new jobs that didn't exist a decade ago. Learn the skills, certifications, and learning paths to build a career in blockchain and Web3.",
+    points: [
+      "Developer roles: Solidity/Rust smart contract engineers, full-stack Web3 developers",
+      "Non-technical roles: community management, tokenomics design, governance strategy",
+      "In-demand skills: Solidity, Rust, React, IPFS, The Graph, Chainlink integrations",
+      "Certifications: CKB (Certified Kubernetes... ) — actually: CEA (Certified Ethereum Associate), ConsenSys Academy",
+      "Learn for free: CryptoZombies, Buildspace, thirdweb, LearnWeb3DAO",
+      "Hackathons: ETHGlobal, Solana Breakpoint, Solana Hacker Houses — paid bounties",
+      "Earn while learning: Gitcoin bounties, Dework, Layer3 quests",
+    ],
+    links: [
+      { label: "CryptoZombies — Learn Solidity", url: "https://cryptozombies.io" },
+      { label: "thirdweb — Build Web3 Apps", url: "https://thirdweb.com" },
+      { label: "LearnWeb3DAO — Free Tracks", url: "https://learnweb3.io" },
+    ]
+  },
+  {
     id: "compliance",
     icon: ShieldCheck,
     color: "from-red-600/10 to-rose-500/10",
@@ -167,8 +344,8 @@ export default function CryptoWeb3() {
         icon="🔗"
         eyebrow="Web3 Business Integration"
         title="Crypto, Web3 & Blockchain"
-        subtitle="Tokenize real-world assets, pay staff with stablecoins, access Web3 grants, and navigate US crypto regulations — all in one place."
-        tags={["RWA Tokenization", "Stablecoin Payroll", "DeFi Lending", "Web3 Grants", "FIT21 Compliant"]}
+        subtitle="Master the new digital economy — from blockchain fundamentals and smart contracts to DeFi, tokenization, DAOs, and crypto careers — alongside practical tools for your business."
+        tags={["Blockchain 101", "Smart Contracts", "DeFi", "RWA Tokenization", "Stablecoin Payroll", "DAOs", "Tokenomics", "Web3 Careers", "FIT21 Compliant"]}
       />
 
       {/* Sections */}
